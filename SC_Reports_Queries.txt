@@ -1,0 +1,56 @@
+
+select MIN(invoice_date) as Date_From,MAX(invoice_date) as Date_To,sum(invoice_balance) as Balance
+from customer inner join invoice on customer.cus_id=invoice.invoicenum 
+where cus_phonenum = @customernum
+and invoice_date between @date1 and @date2
+
+
+select invoicenum,invoice_date,cus_name,invoice_value,invoice_adv,invoice_disc,invoice_balance 
+from customer inner join invoice on customer.cus_id=invoice.invoicenum 
+where cus_phonenum = @customernum
+and invoice_date between @date1 and @date2
+and invoice_balance > 0
+order by invoice_date asc
+
+
+select DISTINCT invoicenum,invoice_date,cus_name,invoice_value,invoice_adv,invoice_disc,cus_phonenum,SUM(invoice_balance) as Balance 
+from customer inner join invoice on customer.cus_id=invoice.invoicenum 
+where invoice_balance > 0
+Group by invoicenum,invoice_date,cus_name,invoice_value,invoice_adv,invoice_disc,cus_phonenum
+order by cus_phonenum
+
+
+select cus_phonenum,cus_name,cus_address,SUM(invoice_balance) as Balance 
+from customer inner join invoice on customer.cus_id=invoice.invoicenum 
+where invoice_balance > 0
+Group by cus_phonenum,cus_name,cus_address
+
+
+
+select cus_phonenum,cus_name,cus_address,MIN(invoice_date) as Date_From,MAX(invoice_date) as Date_To,SUM(invoice_balance) as Balance 
+from customer inner join invoice on customer.cus_id=invoice.invoicenum 
+where invoice_balance > 0
+Group by cus_phonenum,cus_name,cus_address
+
+
+select MIN(invoice_date) as Date_From,MAX(invoice_date) as Date_To,sum(invoice_balance) as Balance
+from customer inner join invoice on customer.cus_id=invoice.invoicenum 
+where invoice_balance > 0
+
+=====================  LOG Queiries==========================================================================
+select c.cus_id,c.cus_phonenum,c.cus_name,p.loginvtotal,p.logcashrec,p.logdiscount,p.logbalance,p.loginvdate,p.logid
+from customer as c inner join invoice as o on c.cus_id=o.invoicenum inner join paymentlog as p on c.cus_id=p.loginvnum
+where c.cus_phonenum = '03329222593'
+order by p.logid asc
+
+
+
+create table paymentlog(
+logid int primary key identity(1,1),
+loginvnum varchar(55) foreign key references customer(cus_id),
+loginvdate date,
+loginvtotal int,
+logcashrec int,
+logdiscount int,
+logbalance int
+)
