@@ -471,26 +471,17 @@ namespace Cattering
 
         private void ch1_CheckedChanged(object sender, EventArgs e)
         {
-            ch2.Checked = false;
-            ch3.Checked = false;
-
-            foodcatagories();
+            
         }
 
         private void ch2_CheckedChanged(object sender, EventArgs e)
         {
-            ch1.Checked = false;
-            ch3.Checked = false;
-
-            foodcatagories();
+           
         }
 
         private void ch3_CheckedChanged(object sender, EventArgs e)
         {
-            ch1.Checked = false;
-            ch2.Checked = false;
-
-            foodcatagories();
+            
         }
 
         private void qty_KeyPress(object sender, KeyPressEventArgs e)
@@ -502,6 +493,30 @@ namespace Cattering
                 e.Handled = true;
             }
             
+        }
+
+        private void ch3_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch2.Checked = false;
+
+            foodcatagories();
+        }
+
+        private void ch2_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch3.Checked = false;
+
+            foodcatagories();
+        }
+
+        private void ch1_Click(object sender, EventArgs e)
+        {
+            ch2.Checked = false;
+            ch3.Checked = false;
+
+            foodcatagories();
         }
     }
 }

@@ -505,7 +505,7 @@ namespace Cattering
             this.ch1.TabIndex = 3;
             this.ch1.Text = "All Items";
             this.ch1.UseVisualStyleBackColor = true;
-            this.ch1.CheckedChanged += new System.EventHandler(this.ch1_CheckedChanged);
+            this.ch1.Click += new System.EventHandler(this.ch1_Click);
             // 
             // ch2
             // 
@@ -517,7 +517,7 @@ namespace Cattering
             this.ch2.TabIndex = 4;
             this.ch2.Text = "Fast Food";
             this.ch2.UseVisualStyleBackColor = true;
-            this.ch2.CheckedChanged += new System.EventHandler(this.ch2_CheckedChanged);
+            this.ch2.Click += new System.EventHandler(this.ch2_Click);
             // 
             // ch3
             // 
@@ -529,7 +529,7 @@ namespace Cattering
             this.ch3.TabIndex = 5;
             this.ch3.Text = "Biryani / Palao";
             this.ch3.UseVisualStyleBackColor = true;
-            this.ch3.CheckedChanged += new System.EventHandler(this.ch3_CheckedChanged);
+            this.ch3.Click += new System.EventHandler(this.ch3_Click);
             // 
             // Counter_Sales
             // 

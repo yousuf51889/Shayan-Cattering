@@ -31,6 +31,26 @@ upassword varchar(50) not null,
 userrole varchar(50) not null
 )
 
+//------------------ Working with Noman Sir for add Deals Items 09-February-2022 ---------------//
+
+create table deals(
+dealid int primary key identity(1,1),
+dealname varchar(255),
+dealprice money,
+isactive bit
+)
+
+create table additem_deal(
+id int primary key identity(1,1),
+deal_id int foreign key references deals(dealid),
+item_id int foreign key references dishdetails(dishid),
+item_qty int
+)
+
+select deals.dealname,dishdetails.dish_name,additem_deal.item_qty,deals.dealprice from deals 
+inner join additem_deal on deals.dealid = additem_deal.deal_id
+inner join dishdetails on dishdetails.dishid = additem_deal.item_id
+
 
 select * from logins
 ------insert into logins (username,upassword,userrole) values ('muzaffar','3303906967','user')
