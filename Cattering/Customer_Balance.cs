@@ -14,6 +14,9 @@ namespace Cattering
     public partial class Customer_Balance : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-661JC43\SQLEXPRESS;Initial Catalog=cattering;Integrated Security=True");
+
+        public static string nam11;
+
         public Customer_Balance()
         {
             InitializeComponent();
@@ -42,6 +45,8 @@ namespace Cattering
             updatebalancemehtod();
             loadbalanceinvoicesdata();
             voidminusentry();
+
+            
 
         }
 
