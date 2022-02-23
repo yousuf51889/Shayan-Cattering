@@ -535,7 +535,7 @@ namespace Cattering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 928);
+            this.ClientSize = new System.Drawing.Size(1091, 928);
             this.Controls.Add(this.ch3);
             this.Controls.Add(this.ch2);
             this.Controls.Add(this.ch1);
