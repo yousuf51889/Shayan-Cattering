@@ -15,6 +15,9 @@ namespace Cattering
     {
 
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-661JC43\SQLEXPRESS;Initial Catalog=cattering;Integrated Security=True");
+
+        public static string orderidcounter;
+
         public static int x = 0;
         public static int y;
 
@@ -99,8 +102,21 @@ namespace Cattering
         {
             ch1.Checked = true;
             foodcatagories();
+            loadsalesrecordcounter();
 
         }
+
+
+        private void loadsalesrecordcounter() 
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapt = new SqlDataAdapter("select DISTINCT customer.cus_id,customer.cus_name,Orders.order_date,customer.cus_address,customer.cus_totalbill,customer.userid,customer.branch_name from customer left join Orders on Orders.order_no = customer.cus_id where cus_id like 'SCCS%' order by customer.cus_id desc ", con);
+            adapt.Fill(dt);
+            salesrecordgrid.DataSource = dt;
+            con.Close();
+        }
+
 
         decimal qtyvar;
         decimal itrates;
@@ -434,6 +450,7 @@ namespace Cattering
                 con.Close();
 
                 MessageBox.Show("Order Place Succesfully");
+                loadsalesrecordcounter();
 
                 listclear();
                 item.Text = "";
@@ -517,6 +534,42 @@ namespace Cattering
             ch3.Checked = false;
 
             foodcatagories();
+        }
+
+        private void loadorderidnumberforcounterslipprint() 
+        {
+            con.Open();
+            String query1 = "select top 1 cus_id from customer where cus_id like 'SCCS%' order by cus_no desc";
+            SqlCommand cmd1 = new SqlCommand(query1, con);
+            SqlDataReader read = cmd1.ExecuteReader();
+
+            while (read.Read())
+            {
+                orderidcounter = (read[0].ToString());
+            }
+            read.Close();
+            con.Close();
+        }
+
+
+
+        private void print_Click(object sender, EventArgs e)
+        {
+            loadorderidnumberforcounterslipprint();
+            printslip prntslip = new printslip();
+            prntslip.Show();
+            
+            //MessageBox.Show(orderidcounter.ToString());
+        }
+
+        private void salesrecordgrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (salesrecordgrid.Columns[e.ColumnIndex].HeaderText == "Slip_Print")
+            {
+                orderidcounter = salesrecordgrid.SelectedRows[0].Cells[1].Value.ToString();
+                printslip prntslip = new printslip();
+                prntslip.Show();
+            }
         }
     }
 }

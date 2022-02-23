@@ -31,7 +31,6 @@ namespace Cattering
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Counter_Sales));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dish_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,19 +72,14 @@ namespace Cattering
             this.ch1 = new System.Windows.Forms.CheckBox();
             this.ch2 = new System.Windows.Forms.CheckBox();
             this.ch3 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.print = new System.Windows.Forms.Button();
+            this.salesrecordgrid = new System.Windows.Forms.DataGridView();
+            this.Slip_Print = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesrecordgrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Cattering.Properties.Resources.SC_Logo_SW;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -165,7 +159,7 @@ namespace Cattering
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(387, 453);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(600, 399);
+            this.listView1.Size = new System.Drawing.Size(600, 268);
             this.listView1.TabIndex = 27;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -531,11 +525,63 @@ namespace Cattering
             this.ch3.UseVisualStyleBackColor = true;
             this.ch3.Click += new System.EventHandler(this.ch3_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cattering.Properties.Resources.SC_Logo_SW;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // print
+            // 
+            this.print.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.print.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.print.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.print.Location = new System.Drawing.Point(993, 524);
+            this.print.Name = "print";
+            this.print.Size = new System.Drawing.Size(75, 61);
+            this.print.TabIndex = 54;
+            this.print.Text = "Print";
+            this.print.UseVisualStyleBackColor = false;
+            this.print.Click += new System.EventHandler(this.print_Click);
+            // 
+            // salesrecordgrid
+            // 
+            this.salesrecordgrid.AllowUserToAddRows = false;
+            this.salesrecordgrid.AllowUserToDeleteRows = false;
+            this.salesrecordgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.salesrecordgrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.salesrecordgrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.salesrecordgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.salesrecordgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Slip_Print});
+            this.salesrecordgrid.Location = new System.Drawing.Point(12, 727);
+            this.salesrecordgrid.Name = "salesrecordgrid";
+            this.salesrecordgrid.ReadOnly = true;
+            this.salesrecordgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.salesrecordgrid.Size = new System.Drawing.Size(1059, 172);
+            this.salesrecordgrid.TabIndex = 55;
+            this.salesrecordgrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salesrecordgrid_CellClick);
+            // 
+            // Slip_Print
+            // 
+            this.Slip_Print.DataPropertyName = "Slip_Print";
+            this.Slip_Print.HeaderText = "Slip_Print";
+            this.Slip_Print.Name = "Slip_Print";
+            this.Slip_Print.ReadOnly = true;
+            this.Slip_Print.Text = "Slip_Print";
+            this.Slip_Print.UseColumnTextForButtonValue = true;
+            // 
             // Counter_Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 928);
+            this.Controls.Add(this.salesrecordgrid);
+            this.Controls.Add(this.print);
             this.Controls.Add(this.ch3);
             this.Controls.Add(this.ch2);
             this.Controls.Add(this.ch1);
@@ -578,8 +624,9 @@ namespace Cattering
             this.Text = "Counter Sale - POS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Counter_Sales_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesrecordgrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -629,5 +676,8 @@ namespace Cattering
         private System.Windows.Forms.CheckBox ch1;
         private System.Windows.Forms.CheckBox ch2;
         private System.Windows.Forms.CheckBox ch3;
+        private System.Windows.Forms.Button print;
+        private System.Windows.Forms.DataGridView salesrecordgrid;
+        private System.Windows.Forms.DataGridViewButtonColumn Slip_Print;
     }
 }

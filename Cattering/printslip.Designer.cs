@@ -29,29 +29,108 @@ namespace Cattering
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(printslip));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet8 = new Cattering.DataSet8();
+            this.OrdersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable1TableAdapter = new Cattering.DataSet8TableAdapters.DataTable1TableAdapter();
+            this.OrdersTableAdapter = new Cattering.DataSet8TableAdapters.OrdersTableAdapter();
+            this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable2TableAdapter = new Cattering.DataSet8TableAdapters.DataTable2TableAdapter();
+            this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.invoiceTableAdapter = new Cattering.DataSet8TableAdapters.invoiceTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DataTable1BindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.OrdersBindingSource;
+            reportDataSource3.Name = "DataSet3";
+            reportDataSource3.Value = this.DataTable2BindingSource;
+            reportDataSource4.Name = "DataSet4";
+            reportDataSource4.Value = this.invoiceBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Cattering.Report9.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(298, 520);
+            this.reportViewer1.Size = new System.Drawing.Size(372, 630);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.DataSet8;
+            // 
+            // DataSet8
+            // 
+            this.DataSet8.DataSetName = "DataSet8";
+            this.DataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // OrdersBindingSource
+            // 
+            this.OrdersBindingSource.DataMember = "Orders";
+            this.OrdersBindingSource.DataSource = this.DataSet8;
+            // 
+            // DataTable1TableAdapter
+            // 
+            this.DataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // OrdersTableAdapter
+            // 
+            this.OrdersTableAdapter.ClearBeforeFill = true;
+            // 
+            // DataTable2BindingSource
+            // 
+            this.DataTable2BindingSource.DataMember = "DataTable2";
+            this.DataTable2BindingSource.DataSource = this.DataSet8;
+            // 
+            // DataTable2TableAdapter
+            // 
+            this.DataTable2TableAdapter.ClearBeforeFill = true;
+            // 
+            // invoiceBindingSource
+            // 
+            this.invoiceBindingSource.DataMember = "invoice";
+            this.invoiceBindingSource.DataSource = this.DataSet8;
+            // 
+            // invoiceTableAdapter
+            // 
+            this.invoiceTableAdapter.ClearBeforeFill = true;
             // 
             // printslip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 520);
+            this.ClientSize = new System.Drawing.Size(372, 630);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "printslip";
             this.Text = "Print Slip";
             this.Load += new System.EventHandler(this.printslip_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -59,5 +138,14 @@ namespace Cattering
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource DataTable1BindingSource;
+        private DataSet8 DataSet8;
+        private DataSet8TableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
+        private System.Windows.Forms.BindingSource OrdersBindingSource;
+        private DataSet8TableAdapters.OrdersTableAdapter OrdersTableAdapter;
+        private System.Windows.Forms.BindingSource DataTable2BindingSource;
+        private System.Windows.Forms.BindingSource invoiceBindingSource;
+        private DataSet8TableAdapters.DataTable2TableAdapter DataTable2TableAdapter;
+        private DataSet8TableAdapters.invoiceTableAdapter invoiceTableAdapter;
     }
 }
