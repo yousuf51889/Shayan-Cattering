@@ -558,6 +558,8 @@ namespace Cattering
             loadorderidnumberforcounterslipprint();
             printslip prntslip = new printslip();
             prntslip.Show();
+
+            
             
             //MessageBox.Show(orderidcounter.ToString());
         }
