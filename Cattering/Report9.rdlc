@@ -270,6 +270,8 @@
                               <Value>Item</Value>
                               <Style>
                                 <FontFamily>Bahnschrift Condensed</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -302,6 +304,8 @@
                               <Value>Qty</Value>
                               <Style>
                                 <FontFamily>Bahnschrift Condensed</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -336,6 +340,8 @@
                               <Value>Rates</Value>
                               <Style>
                                 <FontFamily>Bahnschrift Condensed</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -370,6 +376,8 @@
                               <Value>Amount</Value>
                               <Style>
                                 <FontFamily>Bahnschrift Condensed</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -988,7 +996,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>2.33748cm</Top>
-          <Left>1.90352cm</Left>
+          <Left>1.58602cm</Left>
           <Height>0.97041cm</Height>
           <Width>6.24417cm</Width>
           <Style>
@@ -1001,21 +1009,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="Image5">
-          <Source>Embedded</Source>
-          <Value>SC_Logo_SW</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0.34882cm</Top>
-          <Left>0.10266cm</Left>
-          <Height>1.10105cm</Height>
-          <Width>1.98684cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
         <Textbox Name="Textbox1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -1039,10 +1032,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Left>1.46155cm</Left>
+          <Left>0.82655cm</Left>
           <Height>1.15346cm</Height>
           <Width>7.84861cm</Width>
-          <ZIndex>2</ZIndex>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1105,10 +1098,10 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>1.04502cm</Top>
-          <Left>1.63893cm</Left>
+          <Left>1.00393cm</Left>
           <Height>1.42897cm</Height>
           <Width>7.22313cm</Width>
-          <ZIndex>3</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1124,7 +1117,7 @@
           <Left>0.10266cm</Left>
           <Height>0cm</Height>
           <Width>9.2075cm</Width>
-          <ZIndex>4</ZIndex>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>
