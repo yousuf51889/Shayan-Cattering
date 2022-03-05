@@ -326,7 +326,9 @@
     <EmbeddedResource Include="Report6.rdlc" />
     <EmbeddedResource Include="Report7.rdlc" />
     <EmbeddedResource Include="Report8.rdlc" />
-    <EmbeddedResource Include="Report9.rdlc" />
+    <EmbeddedResource Include="Report9.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Content\bold-reports\bootstrap4\icons\ejicons.eot" />
     <None Include="Content\bold-reports\bootstrap4\icons\ejicons.ttf" />
     <None Include="Content\bold-reports\bootstrap4\icons\ejicons.woff" />
@@ -626,6 +628,7 @@
     <Content Include="Content\bold-reports\office-365\images\slider-tick.png" />
     <Content Include="Content\bold-reports\office-365\images\waitingpopup.gif" />
     <None Include="Resources\loginform.png" />
+    <Compile Include="LocalReportExtensions.cs" />
     <Content Include="SC_Img.jpg" />
     <Content Include="Scripts\bold-reports\bold.report-designer.min.js" />
     <Content Include="Scripts\bold-reports\bold.report-viewer.min.js" />

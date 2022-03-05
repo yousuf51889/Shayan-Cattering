@@ -37,8 +37,7 @@ namespace Cattering
             this.DataTable1TableAdapter.Fill(this.DataSet8.DataTable1, Counter_Sales.orderidcounter.ToString());
 
             this.reportViewer1.RefreshReport();
-                        
-
+            
         }
 
 

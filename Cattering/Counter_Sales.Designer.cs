@@ -76,6 +76,14 @@ namespace Cattering
             this.print = new System.Windows.Forms.Button();
             this.salesrecordgrid = new System.Windows.Forms.DataGridView();
             this.Slip_Print = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ch11 = new System.Windows.Forms.CheckBox();
+            this.ch10 = new System.Windows.Forms.CheckBox();
+            this.ch9 = new System.Windows.Forms.CheckBox();
+            this.ch8 = new System.Windows.Forms.CheckBox();
+            this.ch7 = new System.Windows.Forms.CheckBox();
+            this.ch6 = new System.Windows.Forms.CheckBox();
+            this.ch5 = new System.Windows.Forms.CheckBox();
+            this.ch4 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesrecordgrid)).BeginInit();
@@ -105,7 +113,7 @@ namespace Cattering
             this.digh_ratesPP,
             this.dish_ratespkg});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.Location = new System.Drawing.Point(157, 64);
+            this.dataGridView1.Location = new System.Drawing.Point(314, 64);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -157,7 +165,7 @@ namespace Cattering
             this.listView1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(387, 453);
+            this.listView1.Location = new System.Drawing.Point(544, 453);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(600, 268);
             this.listView1.TabIndex = 27;
@@ -187,7 +195,7 @@ namespace Cattering
             // item
             // 
             this.item.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item.Location = new System.Drawing.Point(157, 420);
+            this.item.Location = new System.Drawing.Point(314, 420);
             this.item.Name = "item";
             this.item.ReadOnly = true;
             this.item.Size = new System.Drawing.Size(464, 27);
@@ -196,7 +204,7 @@ namespace Cattering
             // rates
             // 
             this.rates.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rates.Location = new System.Drawing.Point(627, 420);
+            this.rates.Location = new System.Drawing.Point(784, 420);
             this.rates.Name = "rates";
             this.rates.ReadOnly = true;
             this.rates.Size = new System.Drawing.Size(68, 27);
@@ -210,7 +218,7 @@ namespace Cattering
             this.unittype.Items.AddRange(new object[] {
             "Per Person",
             "Per KG"});
-            this.unittype.Location = new System.Drawing.Point(951, 3);
+            this.unittype.Location = new System.Drawing.Point(1064, 3);
             this.unittype.Name = "unittype";
             this.unittype.Size = new System.Drawing.Size(120, 27);
             this.unittype.TabIndex = 1;
@@ -218,7 +226,7 @@ namespace Cattering
             // qty
             // 
             this.qty.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty.Location = new System.Drawing.Point(739, 420);
+            this.qty.Location = new System.Drawing.Point(896, 420);
             this.qty.Name = "qty";
             this.qty.Size = new System.Drawing.Size(45, 27);
             this.qty.TabIndex = 9;
@@ -230,7 +238,7 @@ namespace Cattering
             // total
             // 
             this.total.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total.Location = new System.Drawing.Point(828, 420);
+            this.total.Location = new System.Drawing.Point(985, 420);
             this.total.Name = "total";
             this.total.ReadOnly = true;
             this.total.Size = new System.Drawing.Size(73, 27);
@@ -241,7 +249,7 @@ namespace Cattering
             // btnplus
             // 
             this.btnplus.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnplus.Location = new System.Drawing.Point(787, 414);
+            this.btnplus.Location = new System.Drawing.Point(944, 414);
             this.btnplus.Name = "btnplus";
             this.btnplus.Size = new System.Drawing.Size(39, 37);
             this.btnplus.TabIndex = 10;
@@ -252,7 +260,7 @@ namespace Cattering
             // btnminus
             // 
             this.btnminus.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnminus.Location = new System.Drawing.Point(697, 414);
+            this.btnminus.Location = new System.Drawing.Point(854, 414);
             this.btnminus.Name = "btnminus";
             this.btnminus.Size = new System.Drawing.Size(39, 37);
             this.btnminus.TabIndex = 8;
@@ -263,7 +271,7 @@ namespace Cattering
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(907, 421);
+            this.button1.Location = new System.Drawing.Point(1064, 421);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 27);
             this.button1.TabIndex = 12;
@@ -274,7 +282,7 @@ namespace Cattering
             // gtotal1
             // 
             this.gtotal1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtotal1.Location = new System.Drawing.Point(307, 453);
+            this.gtotal1.Location = new System.Drawing.Point(464, 453);
             this.gtotal1.Name = "gtotal1";
             this.gtotal1.ReadOnly = true;
             this.gtotal1.Size = new System.Drawing.Size(74, 26);
@@ -287,7 +295,7 @@ namespace Cattering
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(173, 457);
+            this.label1.Location = new System.Drawing.Point(330, 457);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 19);
             this.label1.TabIndex = 21;
@@ -296,7 +304,7 @@ namespace Cattering
             // GST
             // 
             this.GST.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GST.Location = new System.Drawing.Point(307, 480);
+            this.GST.Location = new System.Drawing.Point(464, 480);
             this.GST.Name = "GST";
             this.GST.ReadOnly = true;
             this.GST.Size = new System.Drawing.Size(74, 26);
@@ -307,7 +315,7 @@ namespace Cattering
             // Discount
             // 
             this.Discount.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Discount.Location = new System.Drawing.Point(307, 507);
+            this.Discount.Location = new System.Drawing.Point(464, 507);
             this.Discount.Name = "Discount";
             this.Discount.Size = new System.Drawing.Size(74, 26);
             this.Discount.TabIndex = 16;
@@ -319,7 +327,7 @@ namespace Cattering
             // Grand_Total
             // 
             this.Grand_Total.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grand_Total.Location = new System.Drawing.Point(307, 535);
+            this.Grand_Total.Location = new System.Drawing.Point(464, 535);
             this.Grand_Total.Name = "Grand_Total";
             this.Grand_Total.ReadOnly = true;
             this.Grand_Total.Size = new System.Drawing.Size(74, 26);
@@ -331,7 +339,7 @@ namespace Cattering
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(218, 484);
+            this.label3.Location = new System.Drawing.Point(375, 484);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 19);
             this.label3.TabIndex = 22;
@@ -341,7 +349,7 @@ namespace Cattering
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(218, 511);
+            this.label4.Location = new System.Drawing.Point(375, 511);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 19);
             this.label4.TabIndex = 23;
@@ -351,7 +359,7 @@ namespace Cattering
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(138, 536);
+            this.label5.Location = new System.Drawing.Point(295, 536);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(165, 19);
             this.label5.TabIndex = 53;
@@ -360,7 +368,7 @@ namespace Cattering
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(307, 562);
+            this.textBox1.Location = new System.Drawing.Point(464, 562);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(74, 26);
@@ -371,7 +379,7 @@ namespace Cattering
             // cashrec
             // 
             this.cashrec.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cashrec.Location = new System.Drawing.Point(307, 562);
+            this.cashrec.Location = new System.Drawing.Point(464, 562);
             this.cashrec.Name = "cashrec";
             this.cashrec.Size = new System.Drawing.Size(74, 26);
             this.cashrec.TabIndex = 18;
@@ -384,7 +392,7 @@ namespace Cattering
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(138, 539);
+            this.label6.Location = new System.Drawing.Point(295, 539);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 19);
             this.label6.TabIndex = 24;
@@ -394,7 +402,7 @@ namespace Cattering
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(182, 566);
+            this.label7.Location = new System.Drawing.Point(339, 566);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 19);
             this.label7.TabIndex = 25;
@@ -403,7 +411,7 @@ namespace Cattering
             // chnageam
             // 
             this.chnageam.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chnageam.Location = new System.Drawing.Point(307, 589);
+            this.chnageam.Location = new System.Drawing.Point(464, 589);
             this.chnageam.Name = "chnageam";
             this.chnageam.ReadOnly = true;
             this.chnageam.Size = new System.Drawing.Size(74, 26);
@@ -415,7 +423,7 @@ namespace Cattering
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(168, 592);
+            this.label8.Location = new System.Drawing.Point(325, 592);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(135, 19);
             this.label8.TabIndex = 26;
@@ -423,7 +431,7 @@ namespace Cattering
             // 
             // delitem
             // 
-            this.delitem.Location = new System.Drawing.Point(986, 420);
+            this.delitem.Location = new System.Drawing.Point(1143, 420);
             this.delitem.Name = "delitem";
             this.delitem.Size = new System.Drawing.Size(80, 28);
             this.delitem.TabIndex = 13;
@@ -436,7 +444,7 @@ namespace Cattering
             this.btnreset.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnreset.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnreset.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnreset.Location = new System.Drawing.Point(870, 4);
+            this.btnreset.Location = new System.Drawing.Point(983, 4);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(75, 26);
             this.btnreset.TabIndex = 0;
@@ -449,7 +457,7 @@ namespace Cattering
             this.insertorder.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.insertorder.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insertorder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.insertorder.Location = new System.Drawing.Point(993, 452);
+            this.insertorder.Location = new System.Drawing.Point(1150, 452);
             this.insertorder.Name = "insertorder";
             this.insertorder.Size = new System.Drawing.Size(75, 61);
             this.insertorder.TabIndex = 20;
@@ -493,7 +501,7 @@ namespace Cattering
             // 
             this.ch1.AutoSize = true;
             this.ch1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ch1.Location = new System.Drawing.Point(8, 145);
+            this.ch1.Location = new System.Drawing.Point(5, 145);
             this.ch1.Name = "ch1";
             this.ch1.Size = new System.Drawing.Size(96, 27);
             this.ch1.TabIndex = 3;
@@ -505,7 +513,7 @@ namespace Cattering
             // 
             this.ch2.AutoSize = true;
             this.ch2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ch2.Location = new System.Drawing.Point(8, 178);
+            this.ch2.Location = new System.Drawing.Point(4, 178);
             this.ch2.Name = "ch2";
             this.ch2.Size = new System.Drawing.Size(103, 27);
             this.ch2.TabIndex = 4;
@@ -517,7 +525,7 @@ namespace Cattering
             // 
             this.ch3.AutoSize = true;
             this.ch3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ch3.Location = new System.Drawing.Point(9, 210);
+            this.ch3.Location = new System.Drawing.Point(5, 210);
             this.ch3.Name = "ch3";
             this.ch3.Size = new System.Drawing.Size(139, 27);
             this.ch3.TabIndex = 5;
@@ -540,7 +548,7 @@ namespace Cattering
             this.print.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.print.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.print.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.print.Location = new System.Drawing.Point(993, 524);
+            this.print.Location = new System.Drawing.Point(1150, 524);
             this.print.Name = "print";
             this.print.Size = new System.Drawing.Size(75, 61);
             this.print.TabIndex = 54;
@@ -562,7 +570,7 @@ namespace Cattering
             this.salesrecordgrid.Name = "salesrecordgrid";
             this.salesrecordgrid.ReadOnly = true;
             this.salesrecordgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.salesrecordgrid.Size = new System.Drawing.Size(1059, 172);
+            this.salesrecordgrid.Size = new System.Drawing.Size(1215, 172);
             this.salesrecordgrid.TabIndex = 55;
             this.salesrecordgrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salesrecordgrid_CellClick);
             // 
@@ -575,11 +583,115 @@ namespace Cattering
             this.Slip_Print.Text = "Slip_Print";
             this.Slip_Print.UseColumnTextForButtonValue = true;
             // 
+            // ch11
+            // 
+            this.ch11.AutoSize = true;
+            this.ch11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch11.Location = new System.Drawing.Point(5, 475);
+            this.ch11.Name = "ch11";
+            this.ch11.Size = new System.Drawing.Size(146, 27);
+            this.ch11.TabIndex = 71;
+            this.ch11.Text = "Chineese Items";
+            this.ch11.UseVisualStyleBackColor = true;
+            this.ch11.Click += new System.EventHandler(this.ch11_Click);
+            // 
+            // ch10
+            // 
+            this.ch10.AutoSize = true;
+            this.ch10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch10.Location = new System.Drawing.Point(5, 442);
+            this.ch10.Name = "ch10";
+            this.ch10.Size = new System.Drawing.Size(131, 27);
+            this.ch10.TabIndex = 70;
+            this.ch10.Text = "Sweet Dishes";
+            this.ch10.UseVisualStyleBackColor = true;
+            this.ch10.Click += new System.EventHandler(this.ch10_Click);
+            // 
+            // ch9
+            // 
+            this.ch9.AutoSize = true;
+            this.ch9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch9.Location = new System.Drawing.Point(5, 409);
+            this.ch9.Name = "ch9";
+            this.ch9.Size = new System.Drawing.Size(120, 27);
+            this.ch9.TabIndex = 69;
+            this.ch9.Text = "Curry Items";
+            this.ch9.UseVisualStyleBackColor = true;
+            this.ch9.Click += new System.EventHandler(this.ch9_Click);
+            // 
+            // ch8
+            // 
+            this.ch8.AutoSize = true;
+            this.ch8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch8.Location = new System.Drawing.Point(5, 376);
+            this.ch8.Name = "ch8";
+            this.ch8.Size = new System.Drawing.Size(116, 27);
+            this.ch8.TabIndex = 68;
+            this.ch8.Text = "Fried Items";
+            this.ch8.UseVisualStyleBackColor = true;
+            this.ch8.Click += new System.EventHandler(this.ch8_Click);
+            // 
+            // ch7
+            // 
+            this.ch7.AutoSize = true;
+            this.ch7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch7.Location = new System.Drawing.Point(4, 341);
+            this.ch7.Name = "ch7";
+            this.ch7.Size = new System.Drawing.Size(129, 27);
+            this.ch7.TabIndex = 67;
+            this.ch7.Text = "Bakery Items";
+            this.ch7.UseVisualStyleBackColor = true;
+            this.ch7.Click += new System.EventHandler(this.ch7_Click);
+            // 
+            // ch6
+            // 
+            this.ch6.AutoSize = true;
+            this.ch6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch6.Location = new System.Drawing.Point(4, 308);
+            this.ch6.Name = "ch6";
+            this.ch6.Size = new System.Drawing.Size(120, 27);
+            this.ch6.TabIndex = 66;
+            this.ch6.Text = "Roti / Bread";
+            this.ch6.UseVisualStyleBackColor = true;
+            this.ch6.Click += new System.EventHandler(this.ch6_Click);
+            // 
+            // ch5
+            // 
+            this.ch5.AutoSize = true;
+            this.ch5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch5.Location = new System.Drawing.Point(4, 275);
+            this.ch5.Name = "ch5";
+            this.ch5.Size = new System.Drawing.Size(139, 27);
+            this.ch5.TabIndex = 65;
+            this.ch5.Text = "Drinks / Juices";
+            this.ch5.UseVisualStyleBackColor = true;
+            this.ch5.Click += new System.EventHandler(this.ch5_Click);
+            // 
+            // ch4
+            // 
+            this.ch4.AutoSize = true;
+            this.ch4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch4.Location = new System.Drawing.Point(4, 243);
+            this.ch4.Name = "ch4";
+            this.ch4.Size = new System.Drawing.Size(138, 27);
+            this.ch4.TabIndex = 64;
+            this.ch4.Text = "Bar B.Q / Rolls";
+            this.ch4.UseVisualStyleBackColor = true;
+            this.ch4.Click += new System.EventHandler(this.ch4_Click);
+            // 
             // Counter_Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 928);
+            this.ClientSize = new System.Drawing.Size(1250, 928);
+            this.Controls.Add(this.ch11);
+            this.Controls.Add(this.ch10);
+            this.Controls.Add(this.ch9);
+            this.Controls.Add(this.ch8);
+            this.Controls.Add(this.ch7);
+            this.Controls.Add(this.ch6);
+            this.Controls.Add(this.ch5);
+            this.Controls.Add(this.ch4);
             this.Controls.Add(this.salesrecordgrid);
             this.Controls.Add(this.print);
             this.Controls.Add(this.ch3);
@@ -679,5 +791,13 @@ namespace Cattering
         private System.Windows.Forms.Button print;
         private System.Windows.Forms.DataGridView salesrecordgrid;
         private System.Windows.Forms.DataGridViewButtonColumn Slip_Print;
+        private System.Windows.Forms.CheckBox ch11;
+        private System.Windows.Forms.CheckBox ch10;
+        private System.Windows.Forms.CheckBox ch9;
+        private System.Windows.Forms.CheckBox ch8;
+        private System.Windows.Forms.CheckBox ch7;
+        private System.Windows.Forms.CheckBox ch6;
+        private System.Windows.Forms.CheckBox ch5;
+        private System.Windows.Forms.CheckBox ch4;
     }
 }

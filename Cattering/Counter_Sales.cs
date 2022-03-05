@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -89,7 +90,95 @@ namespace Cattering
                 adapt.Fill(dt);
                 dataGridView1.DataSource = dt;
                 con.Close();
-                              
+
+            }
+
+
+            else if (ch4.Checked == true)
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapt = new SqlDataAdapter("select dish_name,digh_ratespp,dish_ratespkg from dishdetails where foodcatagory = 'Bar B.Q / Rolls'", con);
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+            }
+
+            else if (ch5.Checked == true)
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapt = new SqlDataAdapter("select dish_name,digh_ratespp,dish_ratespkg from dishdetails where foodcatagory = 'Drinks / Juices'", con);
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+            }
+
+            else if (ch6.Checked == true)
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapt = new SqlDataAdapter("select dish_name,digh_ratespp,dish_ratespkg from dishdetails where foodcatagory = 'Roti / Bread'", con);
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+            }
+
+            else if (ch7.Checked == true)
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapt = new SqlDataAdapter("select dish_name,digh_ratespp,dish_ratespkg from dishdetails where foodcatagory = 'Bakery Items'", con);
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+            }
+
+            else if (ch8.Checked == true)
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapt = new SqlDataAdapter("select dish_name,digh_ratespp,dish_ratespkg from dishdetails where foodcatagory = 'Fried Items'", con);
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+            }
+
+            else if (ch9.Checked == true)
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapt = new SqlDataAdapter("select dish_name,digh_ratespp,dish_ratespkg from dishdetails where foodcatagory = 'Curry Items'", con);
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+            }
+
+            else if (ch10.Checked == true)
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapt = new SqlDataAdapter("select dish_name,digh_ratespp,dish_ratespkg from dishdetails where foodcatagory = 'Desert Items / Sweet Dishes'", con);
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+            }
+
+            else if (ch11.Checked == true)
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapt = new SqlDataAdapter("select dish_name,digh_ratespp,dish_ratespkg from dishdetails where foodcatagory = 'Chineese Items'", con);
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
 
             }
 
@@ -516,6 +605,14 @@ namespace Cattering
         {
             ch1.Checked = false;
             ch2.Checked = false;
+            ch4.Checked = false;
+            ch5.Checked = false;
+            ch6.Checked = false;
+            ch7.Checked = false;
+            ch8.Checked = false;
+            ch9.Checked = false;
+            ch10.Checked = false;
+            ch11.Checked = false;
 
             foodcatagories();
         }
@@ -524,6 +621,14 @@ namespace Cattering
         {
             ch1.Checked = false;
             ch3.Checked = false;
+            ch4.Checked = false;
+            ch5.Checked = false;
+            ch6.Checked = false;
+            ch7.Checked = false;
+            ch8.Checked = false;
+            ch9.Checked = false;
+            ch10.Checked = false;
+            ch11.Checked = false;
 
             foodcatagories();
         }
@@ -532,9 +637,19 @@ namespace Cattering
         {
             ch2.Checked = false;
             ch3.Checked = false;
+            ch4.Checked = false;
+            ch5.Checked = false;
+            ch6.Checked = false;
+            ch7.Checked = false;
+            ch8.Checked = false;
+            ch9.Checked = false;
+            ch10.Checked = false;
+            ch11.Checked = false;
 
             foodcatagories();
         }
+
+        
 
         private void loadorderidnumberforcounterslipprint() 
         {
@@ -559,9 +674,7 @@ namespace Cattering
             printslip prntslip = new printslip();
             prntslip.Show();
 
-            
-            
-            //MessageBox.Show(orderidcounter.ToString());
+                       
         }
 
         private void salesrecordgrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -571,7 +684,138 @@ namespace Cattering
                 orderidcounter = salesrecordgrid.SelectedRows[0].Cells[1].Value.ToString();
                 printslip prntslip = new printslip();
                 prntslip.Show();
+
+                
             }
+        }
+
+        private void ch4_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch2.Checked = false;
+            ch3.Checked = false;
+            ch5.Checked = false;
+            ch6.Checked = false;
+            ch7.Checked = false;
+            ch8.Checked = false;
+            ch9.Checked = false;
+            ch10.Checked = false;
+            ch11.Checked = false;
+
+            foodcatagories();
+
+        }
+
+        private void ch5_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch2.Checked = false;
+            ch3.Checked = false;
+            ch4.Checked = false;
+            ch6.Checked = false;
+            ch7.Checked = false;
+            ch8.Checked = false;
+            ch9.Checked = false;
+            ch10.Checked = false;
+            ch11.Checked = false;
+
+            foodcatagories();
+        }
+
+        private void ch6_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch2.Checked = false;
+            ch3.Checked = false;
+            ch4.Checked = false;
+            ch5.Checked = false;
+            ch7.Checked = false;
+            ch8.Checked = false;
+            ch9.Checked = false;
+            ch10.Checked = false;
+            ch11.Checked = false;
+
+            foodcatagories();
+        }
+
+        private void ch7_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch2.Checked = false;
+            ch3.Checked = false;
+            ch4.Checked = false;
+            ch5.Checked = false;
+            ch6.Checked = false;
+            ch8.Checked = false;
+            ch9.Checked = false;
+            ch10.Checked = false;
+            ch11.Checked = false;
+
+            foodcatagories();
+        }
+
+        private void ch8_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch2.Checked = false;
+            ch3.Checked = false;
+            ch4.Checked = false;
+            ch5.Checked = false;
+            ch6.Checked = false;
+            ch7.Checked = false;
+            ch9.Checked = false;
+            ch10.Checked = false;
+            ch11.Checked = false;
+
+            foodcatagories();
+        }
+
+        private void ch9_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch2.Checked = false;
+            ch3.Checked = false;
+            ch4.Checked = false;
+            ch5.Checked = false;
+            ch6.Checked = false;
+            ch7.Checked = false;
+            ch8.Checked = false;
+            ch10.Checked = false;
+            ch11.Checked = false;
+
+            foodcatagories();
+        }
+
+        private void ch10_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch2.Checked = false;
+            ch3.Checked = false;
+            ch4.Checked = false;
+            ch5.Checked = false;
+            ch6.Checked = false;
+            ch7.Checked = false;
+            ch8.Checked = false;
+            ch9.Checked = false;
+            ch11.Checked = false;
+
+            foodcatagories();
+        }
+
+        private void ch11_Click(object sender, EventArgs e)
+        {
+            ch1.Checked = false;
+            ch2.Checked = false;
+            ch3.Checked = false;
+            ch4.Checked = false;
+            ch5.Checked = false;
+            ch6.Checked = false;
+            ch7.Checked = false;
+            ch8.Checked = false;
+            ch9.Checked = false;
+            ch10.Checked = false;
+
+            foodcatagories();
         }
     }
 }
