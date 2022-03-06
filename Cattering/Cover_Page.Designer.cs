@@ -35,6 +35,8 @@ namespace Cattering
             this.kitchenSalesFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creditReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminFunctionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentVouchersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addVendorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +48,8 @@ namespace Cattering
             this.kitchenSalesFormToolStripMenuItem,
             this.creditReportToolStripMenuItem,
             this.adminFunctionsToolStripMenuItem,
+            this.paymentVouchersToolStripMenuItem,
+            this.addVendorsToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -81,6 +85,20 @@ namespace Cattering
             this.adminFunctionsToolStripMenuItem.Text = "Admin Functions";
             this.adminFunctionsToolStripMenuItem.Click += new System.EventHandler(this.adminFunctionsToolStripMenuItem_Click);
             // 
+            // paymentVouchersToolStripMenuItem
+            // 
+            this.paymentVouchersToolStripMenuItem.Name = "paymentVouchersToolStripMenuItem";
+            this.paymentVouchersToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.paymentVouchersToolStripMenuItem.Text = "Payment Vouchers";
+            this.paymentVouchersToolStripMenuItem.Click += new System.EventHandler(this.paymentVouchersToolStripMenuItem_Click);
+            // 
+            // addVendorsToolStripMenuItem
+            // 
+            this.addVendorsToolStripMenuItem.Name = "addVendorsToolStripMenuItem";
+            this.addVendorsToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.addVendorsToolStripMenuItem.Text = "Add Vendors";
+            this.addVendorsToolStripMenuItem.Click += new System.EventHandler(this.addVendorsToolStripMenuItem_Click);
+            // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
@@ -94,7 +112,7 @@ namespace Cattering
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cattering.Properties.Resources.WhatsApp_Image_2022_03_05_at_4_32_10_PM;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1244, 923);
+            this.ClientSize = new System.Drawing.Size(1244, 788);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -119,5 +137,7 @@ namespace Cattering
         private System.Windows.Forms.ToolStripMenuItem creditReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminFunctionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paymentVouchersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addVendorsToolStripMenuItem;
     }
 }

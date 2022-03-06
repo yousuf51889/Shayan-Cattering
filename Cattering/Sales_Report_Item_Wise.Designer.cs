@@ -36,6 +36,8 @@ namespace Cattering
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.sales = new System.Windows.Forms.Label();
+            this.exp = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,17 +96,39 @@ namespace Cattering
             // 
             this.sales.AutoSize = true;
             this.sales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sales.Location = new System.Drawing.Point(280, 9);
+            this.sales.Location = new System.Drawing.Point(336, 12);
             this.sales.Name = "sales";
             this.sales.Size = new System.Drawing.Size(19, 20);
             this.sales.TabIndex = 5;
             this.sales.Text = "0";
+            // 
+            // exp
+            // 
+            this.exp.AutoSize = true;
+            this.exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exp.Location = new System.Drawing.Point(336, 36);
+            this.exp.Name = "exp";
+            this.exp.Size = new System.Drawing.Size(19, 20);
+            this.exp.TabIndex = 6;
+            this.exp.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(197, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Cash Expense";
             // 
             // Sales_Report_Item_Wise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 629);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.exp);
             this.Controls.Add(this.sales);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -129,5 +153,7 @@ namespace Cattering
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label sales;
+        private System.Windows.Forms.Label exp;
+        private System.Windows.Forms.Label label2;
     }
 }

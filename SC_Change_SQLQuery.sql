@@ -124,7 +124,88 @@ group by order_date,order_itemname
 select sum(order_itemperunitrate) as Amount 
 from Orders where order_no like 'SCCS%' and order_date between '2022-03-06' and '2022-03-06'
 
+select * from expense
+select sum(amount) as Cash_Exp from expense where trans_nature in ('Payment','Cash') and date_of_entry between '2022-03-07 00:00' and '2022-03-07 23:59'
 
+
+--SET ANSI_NULLS ON
+--GO
+--SET QUOTED_IDENTIFIER ON
+--GO
+--SET ANSI_PADDING ON
+--GO
+--IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[expense]') AND type in (N'U'))
+--BEGIN
+--CREATE TABLE [dbo].[expense](
+--	[id] [int] IDENTITY(1,1) NOT NULL,
+--	[expense] [varchar](100) NULL,
+--	[amount] [int] NULL,
+--	[username] [varchar](30) NULL,
+--	[date_of_entry] [datetime] NOT NULL,
+--	[paid_to] [varchar](250) NULL,
+--	[trans_nature] [varchar](250) NULL,
+--	[account_head] [varchar](250) NULL,
+--	[branch_name] [varchar](250) NULL,
+--	[Balance] [int] NULL,
+--	[Prefix] [varchar](50) NULL,
+--	[PCV_No]  AS ([Prefix]+right('00000'+CONVERT([varchar](5),[id],0),(5))) PERSISTED,
+--PRIMARY KEY CLUSTERED 
+--(
+--	[id] ASC
+--)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+--) ON [PRIMARY]
+--END
+--GO
+--SET ANSI_PADDING OFF
+--GO
+
+
+
+--SET ANSI_NULLS ON
+--GO
+--SET QUOTED_IDENTIFIER ON
+--GO
+--SET ANSI_PADDING ON
+--GO
+--IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[HOF]') AND type in (N'U'))
+--BEGIN
+--CREATE TABLE [dbo].[HOF](
+--	[hof_id] [int] IDENTITY(1,1) NOT NULL,
+--	[hof_name] [varchar](250) NULL,
+--PRIMARY KEY CLUSTERED 
+--(
+--	[hof_id] ASC
+--)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+--) ON [PRIMARY]
+--END
+--GO
+--SET ANSI_PADDING OFF
+--GO
+
+
+--SET ANSI_NULLS ON
+--GO
+--SET QUOTED_IDENTIFIER ON
+--GO
+--SET ANSI_PADDING ON
+--GO
+--IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Vendor]') AND type in (N'U'))
+--BEGIN
+--CREATE TABLE [dbo].[Vendor](
+--	[vendor_id] [int] IDENTITY(1,1) NOT NULL,
+--	[vendor_name] [varchar](250) NOT NULL,
+--PRIMARY KEY CLUSTERED 
+--(
+--	[vendor_id] ASC
+--)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+--) ON [PRIMARY]
+--END
+--GO
+--SET ANSI_PADDING OFF
+--GO
+
+alter table vendor
+add phone varchar(50)
 
 
 

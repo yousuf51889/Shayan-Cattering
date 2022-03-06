@@ -16,8 +16,8 @@ namespace Cattering
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new login_form());
-            Application.Run(new Counter_Sales());
+            Application.Run(new login_form());
+            //Application.Run(new Payment_Vouchers());
 
         }
     }

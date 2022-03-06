@@ -81,7 +81,9 @@
     <Reference Include="ReportViewer.PDF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ReportViewer.PDF.1.0.0\lib\net47\ReportViewer.PDF.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -99,6 +101,12 @@
     </Compile>
     <Compile Include="AddNewDishName.Designer.cs">
       <DependentUpon>AddNewDishName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addnew_vendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addnew_vendor.Designer.cs">
+      <DependentUpon>addnew_vendor.cs</DependentUpon>
     </Compile>
     <Compile Include="admin_window.cs">
       <SubType>Form</SubType>
@@ -251,6 +259,12 @@
     <Compile Include="Monthly_Report_Print.Designer.cs">
       <DependentUpon>Monthly_Report_Print.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payment_Vouchers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment_Vouchers.Designer.cs">
+      <DependentUpon>Payment_Vouchers.cs</DependentUpon>
+    </Compile>
     <Compile Include="printslip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +288,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="AddNewDishName.resx">
       <DependentUpon>AddNewDishName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addnew_vendor.resx">
+      <DependentUpon>addnew_vendor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin_window.resx">
       <DependentUpon>admin_window.cs</DependentUpon>
@@ -325,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Monthly_Report_Print.resx">
       <DependentUpon>Monthly_Report_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment_Vouchers.resx">
+      <DependentUpon>Payment_Vouchers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="printslip.resx">
       <DependentUpon>printslip.cs</DependentUpon>

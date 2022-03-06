@@ -57,5 +57,17 @@ namespace Cattering
         {
             Application.Exit();
         }
+
+        private void paymentVouchersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Payment_Vouchers pcv = new Payment_Vouchers();
+            pcv.Show();
+        }
+
+        private void addVendorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addnew_vendor adon = new addnew_vendor();
+            adon.Show();
+        }
     }
 }
