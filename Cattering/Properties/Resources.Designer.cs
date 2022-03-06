@@ -19,7 +19,7 @@ namespace Cattering.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -96,6 +96,26 @@ namespace Cattering.Properties {
         internal static System.Drawing.Bitmap shayan_catt_logoo {
             get {
                 object obj = ResourceManager.GetObject("shayan.catt.logoo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_03_05_at_4_32_07_PM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2022-03-05 at 4.32.07 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_03_05_at_4_32_10_PM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2022-03-05 at 4.32.10 PM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

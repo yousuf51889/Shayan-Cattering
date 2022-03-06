@@ -345,6 +345,8 @@ namespace Cattering
         decimal ttdisc = 0;
         decimal ttgrttl = 0;
 
+        // Value of GST TAX
+
         private void getinvcalc()
         {
             if (Discount.Text == "")
@@ -816,6 +818,23 @@ namespace Cattering
             ch10.Checked = false;
 
             foodcatagories();
+        }
+
+        private void GST_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Sales_Report_Item_Wise slit = new Sales_Report_Item_Wise();
+            slit.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Complete_Sales_Records csrc = new Complete_Sales_Records();
+            csrc.Show();
         }
     }
 }

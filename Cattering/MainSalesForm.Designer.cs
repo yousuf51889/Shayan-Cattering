@@ -98,15 +98,17 @@ namespace Cattering
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.reportingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creditDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.counterSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.counterSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dishnamesgrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerrecordgrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridorderitemsdetails)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,7 +116,7 @@ namespace Cattering
             // 
             this.cusid.AutoSize = true;
             this.cusid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusid.Location = new System.Drawing.Point(18, 117);
+            this.cusid.Location = new System.Drawing.Point(18, 150);
             this.cusid.Name = "cusid";
             this.cusid.Size = new System.Drawing.Size(99, 20);
             this.cusid.TabIndex = 0;
@@ -124,7 +126,7 @@ namespace Cattering
             // 
             this.cusname.AutoSize = true;
             this.cusname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusname.Location = new System.Drawing.Point(18, 174);
+            this.cusname.Location = new System.Drawing.Point(18, 207);
             this.cusname.Name = "cusname";
             this.cusname.Size = new System.Drawing.Size(124, 20);
             this.cusname.TabIndex = 0;
@@ -134,7 +136,7 @@ namespace Cattering
             // 
             this.cusnumber.AutoSize = true;
             this.cusnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusnumber.Location = new System.Drawing.Point(18, 145);
+            this.cusnumber.Location = new System.Drawing.Point(18, 178);
             this.cusnumber.Name = "cusnumber";
             this.cusnumber.Size = new System.Drawing.Size(138, 20);
             this.cusnumber.TabIndex = 0;
@@ -144,7 +146,7 @@ namespace Cattering
             // 
             this.cusaddress.AutoSize = true;
             this.cusaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusaddress.Location = new System.Drawing.Point(18, 201);
+            this.cusaddress.Location = new System.Drawing.Point(18, 234);
             this.cusaddress.Name = "cusaddress";
             this.cusaddress.Size = new System.Drawing.Size(141, 20);
             this.cusaddress.TabIndex = 0;
@@ -154,7 +156,7 @@ namespace Cattering
             // 
             this.cusbill.AutoSize = true;
             this.cusbill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusbill.Location = new System.Drawing.Point(644, 30);
+            this.cusbill.Location = new System.Drawing.Point(644, 63);
             this.cusbill.Name = "cusbill";
             this.cusbill.Size = new System.Drawing.Size(121, 16);
             this.cusbill.TabIndex = 0;
@@ -162,7 +164,7 @@ namespace Cattering
             // 
             // txtcusid
             // 
-            this.txtcusid.Location = new System.Drawing.Point(171, 117);
+            this.txtcusid.Location = new System.Drawing.Point(171, 150);
             this.txtcusid.Name = "txtcusid";
             this.txtcusid.ReadOnly = true;
             this.txtcusid.Size = new System.Drawing.Size(108, 20);
@@ -170,7 +172,7 @@ namespace Cattering
             // 
             // txtcusnum
             // 
-            this.txtcusnum.Location = new System.Drawing.Point(171, 145);
+            this.txtcusnum.Location = new System.Drawing.Point(171, 178);
             this.txtcusnum.Name = "txtcusnum";
             this.txtcusnum.Size = new System.Drawing.Size(108, 20);
             this.txtcusnum.TabIndex = 0;
@@ -178,14 +180,14 @@ namespace Cattering
             // 
             // txtcusname
             // 
-            this.txtcusname.Location = new System.Drawing.Point(171, 174);
+            this.txtcusname.Location = new System.Drawing.Point(171, 207);
             this.txtcusname.Name = "txtcusname";
             this.txtcusname.Size = new System.Drawing.Size(448, 20);
             this.txtcusname.TabIndex = 1;
             // 
             // txtcusaddress
             // 
-            this.txtcusaddress.Location = new System.Drawing.Point(171, 201);
+            this.txtcusaddress.Location = new System.Drawing.Point(171, 234);
             this.txtcusaddress.Name = "txtcusaddress";
             this.txtcusaddress.Size = new System.Drawing.Size(448, 20);
             this.txtcusaddress.TabIndex = 2;
@@ -193,7 +195,7 @@ namespace Cattering
             // txtcusbill
             // 
             this.txtcusbill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcusbill.Location = new System.Drawing.Point(1068, 427);
+            this.txtcusbill.Location = new System.Drawing.Point(1068, 460);
             this.txtcusbill.Name = "txtcusbill";
             this.txtcusbill.ReadOnly = true;
             this.txtcusbill.Size = new System.Drawing.Size(113, 26);
@@ -217,7 +219,7 @@ namespace Cattering
             this.newentrybutton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.newentrybutton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newentrybutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.newentrybutton.Location = new System.Drawing.Point(274, 27);
+            this.newentrybutton.Location = new System.Drawing.Point(274, 60);
             this.newentrybutton.Name = "newentrybutton";
             this.newentrybutton.Size = new System.Drawing.Size(137, 38);
             this.newentrybutton.TabIndex = 10;
@@ -233,7 +235,7 @@ namespace Cattering
             this.dishnamesgrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dishnamesgrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dishnamesgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dishnamesgrid.Location = new System.Drawing.Point(645, 66);
+            this.dishnamesgrid.Location = new System.Drawing.Point(645, 99);
             this.dishnamesgrid.Name = "dishnamesgrid";
             this.dishnamesgrid.ReadOnly = true;
             this.dishnamesgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -245,7 +247,7 @@ namespace Cattering
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1075, 409);
+            this.label1.Location = new System.Drawing.Point(1075, 442);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 0;
@@ -253,7 +255,7 @@ namespace Cattering
             // 
             // searchboxdishname
             // 
-            this.searchboxdishname.Location = new System.Drawing.Point(645, 45);
+            this.searchboxdishname.Location = new System.Drawing.Point(645, 78);
             this.searchboxdishname.Name = "searchboxdishname";
             this.searchboxdishname.Size = new System.Drawing.Size(142, 20);
             this.searchboxdishname.TabIndex = 1;
@@ -268,7 +270,7 @@ namespace Cattering
             "Quotation",
             "Order",
             "Reject"});
-            this.cboxquotorder.Location = new System.Drawing.Point(274, 70);
+            this.cboxquotorder.Location = new System.Drawing.Point(274, 103);
             this.cboxquotorder.Name = "cboxquotorder";
             this.cboxquotorder.Size = new System.Drawing.Size(136, 24);
             this.cboxquotorder.TabIndex = 1;
@@ -292,7 +294,7 @@ namespace Cattering
             this.groupBox1.Controls.Add(this.orderitemname);
             this.groupBox1.Controls.Add(this.orderdatetime);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 231);
+            this.groupBox1.Location = new System.Drawing.Point(12, 264);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1169, 95);
             this.groupBox1.TabIndex = 15;
@@ -450,7 +452,7 @@ namespace Cattering
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(938, 43);
+            this.label10.Location = new System.Drawing.Point(938, 76);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(141, 16);
             this.label10.TabIndex = 0;
@@ -459,7 +461,7 @@ namespace Cattering
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1077, 39);
+            this.button1.Location = new System.Drawing.Point(1077, 72);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 24);
             this.button1.TabIndex = 16;
@@ -480,7 +482,7 @@ namespace Cattering
             this.orderitemlist.FullRowSelect = true;
             this.orderitemlist.GridLines = true;
             this.orderitemlist.HideSelection = false;
-            this.orderitemlist.Location = new System.Drawing.Point(25, 332);
+            this.orderitemlist.Location = new System.Drawing.Point(25, 365);
             this.orderitemlist.Name = "orderitemlist";
             this.orderitemlist.Size = new System.Drawing.Size(1036, 124);
             this.orderitemlist.TabIndex = 18;
@@ -518,7 +520,7 @@ namespace Cattering
             this.sales.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.sales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sales.Location = new System.Drawing.Point(1068, 331);
+            this.sales.Location = new System.Drawing.Point(1068, 364);
             this.sales.Name = "sales";
             this.sales.Size = new System.Drawing.Size(108, 40);
             this.sales.TabIndex = 5;
@@ -530,7 +532,7 @@ namespace Cattering
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(840, 460);
+            this.label4.Location = new System.Drawing.Point(840, 493);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 16);
             this.label4.TabIndex = 20;
@@ -539,7 +541,7 @@ namespace Cattering
             // txtadvancebox
             // 
             this.txtadvancebox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtadvancebox.Location = new System.Drawing.Point(837, 477);
+            this.txtadvancebox.Location = new System.Drawing.Point(837, 510);
             this.txtadvancebox.Name = "txtadvancebox";
             this.txtadvancebox.Size = new System.Drawing.Size(106, 26);
             this.txtadvancebox.TabIndex = 21;
@@ -550,7 +552,7 @@ namespace Cattering
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1075, 459);
+            this.label11.Location = new System.Drawing.Point(1075, 492);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 16);
             this.label11.TabIndex = 22;
@@ -559,7 +561,7 @@ namespace Cattering
             // txtbalance
             // 
             this.txtbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbalance.Location = new System.Drawing.Point(1068, 477);
+            this.txtbalance.Location = new System.Drawing.Point(1068, 510);
             this.txtbalance.Name = "txtbalance";
             this.txtbalance.ReadOnly = true;
             this.txtbalance.Size = new System.Drawing.Size(113, 26);
@@ -570,7 +572,7 @@ namespace Cattering
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(945, 460);
+            this.label12.Location = new System.Drawing.Point(945, 493);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 16);
             this.label12.TabIndex = 22;
@@ -579,7 +581,7 @@ namespace Cattering
             // txtboxdiscount
             // 
             this.txtboxdiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxdiscount.Location = new System.Drawing.Point(949, 477);
+            this.txtboxdiscount.Location = new System.Drawing.Point(949, 510);
             this.txtboxdiscount.Name = "txtboxdiscount";
             this.txtboxdiscount.Size = new System.Drawing.Size(107, 26);
             this.txtboxdiscount.TabIndex = 24;
@@ -600,7 +602,7 @@ namespace Cattering
             this.Rec_Balance,
             this.Kitchen,
             this.Costing});
-            this.customerrecordgrid.Location = new System.Drawing.Point(27, 509);
+            this.customerrecordgrid.Location = new System.Drawing.Point(27, 542);
             this.customerrecordgrid.Name = "customerrecordgrid";
             this.customerrecordgrid.ReadOnly = true;
             this.customerrecordgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -667,7 +669,7 @@ namespace Cattering
             this.gridorderitemsdetails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridorderitemsdetails.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.gridorderitemsdetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridorderitemsdetails.Location = new System.Drawing.Point(27, 657);
+            this.gridorderitemsdetails.Location = new System.Drawing.Point(27, 690);
             this.gridorderitemsdetails.Name = "gridorderitemsdetails";
             this.gridorderitemsdetails.ReadOnly = true;
             this.gridorderitemsdetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -677,7 +679,7 @@ namespace Cattering
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1068, 377);
+            this.button2.Location = new System.Drawing.Point(1068, 410);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 22);
             this.button2.TabIndex = 27;
@@ -688,7 +690,7 @@ namespace Cattering
             // refresh
             // 
             this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh.Location = new System.Drawing.Point(756, 462);
+            this.refresh.Location = new System.Drawing.Point(756, 495);
             this.refresh.Name = "refresh";
             this.refresh.Size = new System.Drawing.Size(75, 41);
             this.refresh.TabIndex = 28;
@@ -702,7 +704,7 @@ namespace Cattering
             this.TBalance.BackColor = System.Drawing.SystemColors.Window;
             this.TBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBalance.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.TBalance.Location = new System.Drawing.Point(384, 118);
+            this.TBalance.Location = new System.Drawing.Point(384, 151);
             this.TBalance.Name = "TBalance";
             this.TBalance.Size = new System.Drawing.Size(17, 18);
             this.TBalance.TabIndex = 29;
@@ -714,7 +716,7 @@ namespace Cattering
             this.label13.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(289, 117);
+            this.label13.Location = new System.Drawing.Point(289, 150);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(61, 19);
             this.label13.TabIndex = 30;
@@ -725,7 +727,7 @@ namespace Cattering
             this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(285, 145);
+            this.button3.Location = new System.Drawing.Point(285, 178);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 23);
             this.button3.TabIndex = 31;
@@ -736,7 +738,7 @@ namespace Cattering
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(492, 66);
+            this.dateTimePicker1.Location = new System.Drawing.Point(492, 99);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(126, 20);
             this.dateTimePicker1.TabIndex = 32;
@@ -744,7 +746,7 @@ namespace Cattering
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(492, 93);
+            this.dateTimePicker2.Location = new System.Drawing.Point(492, 126);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(126, 20);
             this.dateTimePicker2.TabIndex = 33;
@@ -754,7 +756,7 @@ namespace Cattering
             this.creditlist.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.creditlist.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creditlist.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.creditlist.Location = new System.Drawing.Point(417, 30);
+            this.creditlist.Location = new System.Drawing.Point(417, 63);
             this.creditlist.Name = "creditlist";
             this.creditlist.Size = new System.Drawing.Size(126, 29);
             this.creditlist.TabIndex = 34;
@@ -767,7 +769,7 @@ namespace Cattering
             this.compst.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.compst.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compst.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.compst.Location = new System.Drawing.Point(492, 142);
+            this.compst.Location = new System.Drawing.Point(492, 175);
             this.compst.Name = "compst";
             this.compst.Size = new System.Drawing.Size(126, 23);
             this.compst.TabIndex = 35;
@@ -778,7 +780,7 @@ namespace Cattering
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(492, 120);
+            this.radioButton1.Location = new System.Drawing.Point(492, 153);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(69, 17);
             this.radioButton1.TabIndex = 36;
@@ -789,7 +791,7 @@ namespace Cattering
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(564, 120);
+            this.radioButton2.Location = new System.Drawing.Point(564, 153);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(53, 17);
             this.radioButton2.TabIndex = 36;
@@ -806,7 +808,7 @@ namespace Cattering
             this.adminWindowToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1196, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 24);
             this.menuStrip1.TabIndex = 37;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -824,6 +826,13 @@ namespace Cattering
             this.creditDetailsToolStripMenuItem.Text = "Credit Details";
             this.creditDetailsToolStripMenuItem.Click += new System.EventHandler(this.creditDetailsToolStripMenuItem_Click);
             // 
+            // counterSalesToolStripMenuItem
+            // 
+            this.counterSalesToolStripMenuItem.Name = "counterSalesToolStripMenuItem";
+            this.counterSalesToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.counterSalesToolStripMenuItem.Text = "Counter Sales";
+            this.counterSalesToolStripMenuItem.Click += new System.EventHandler(this.counterSalesToolStripMenuItem_Click);
+            // 
             // adminWindowToolStripMenuItem
             // 
             this.adminWindowToolStripMenuItem.Name = "adminWindowToolStripMenuItem";
@@ -835,35 +844,39 @@ namespace Cattering
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(793, 10);
+            this.label14.Location = new System.Drawing.Point(14, 30);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(17, 19);
             this.label14.TabIndex = 38;
             this.label14.Text = "0";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Cattering.Properties.Resources.WhatsApp_Image_2022_03_05_at_4_32_07_PM;
+            this.pictureBox2.Location = new System.Drawing.Point(595, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(586, 49);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 39;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Cattering.Properties.Resources.SC_Logo_SW;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 81);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // counterSalesToolStripMenuItem
-            // 
-            this.counterSalesToolStripMenuItem.Name = "counterSalesToolStripMenuItem";
-            this.counterSalesToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.counterSalesToolStripMenuItem.Text = "Counter Sales";
-            this.counterSalesToolStripMenuItem.Click += new System.EventHandler(this.counterSalesToolStripMenuItem_Click);
-            // 
             // MainSalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1196, 862);
+            this.ClientSize = new System.Drawing.Size(1200, 898);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -921,6 +934,7 @@ namespace Cattering
             ((System.ComponentModel.ISupportInitialize)(this.gridorderitemsdetails)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1001,6 +1015,7 @@ namespace Cattering
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ToolStripMenuItem creditDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem counterSalesToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

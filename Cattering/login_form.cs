@@ -56,7 +56,7 @@ namespace Cattering
                 read.Close();
                 
                 
-                MainSalesForm msf = new MainSalesForm();
+                Cover_Page msf = new Cover_Page();
                 msf.Show();
                 this.Hide();
 

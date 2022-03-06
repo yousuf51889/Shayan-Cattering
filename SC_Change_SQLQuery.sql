@@ -114,6 +114,17 @@ select SUM(invoice.invoice_value) as Inv_Value, SUM(invoice.Costing) as Costing,
 from invoice left join customer  on invoice.invoicenum = customer.cus_id where invoice.invoice_date between '2021-12-01' and '2021-12-26'
 
 
+//------------------ Extra Requirement Opening of SC on 06-March-2022---------------//
+
+
+select order_date,order_itemname,sum(order_qty) as Qty,sum(order_itemperunitrate) as Amount 
+from Orders where order_no like 'SCCS%' and order_date = '2022-03-06' 
+group by order_date,order_itemname 
+
+select sum(order_itemperunitrate) as Amount 
+from Orders where order_no like 'SCCS%' and order_date between '2022-03-06' and '2022-03-06'
+
+
 
 
 

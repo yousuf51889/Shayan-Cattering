@@ -72,7 +72,6 @@ namespace Cattering
             this.ch1 = new System.Windows.Forms.CheckBox();
             this.ch2 = new System.Windows.Forms.CheckBox();
             this.ch3 = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.print = new System.Windows.Forms.Button();
             this.salesrecordgrid = new System.Windows.Forms.DataGridView();
             this.Slip_Print = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -84,9 +83,14 @@ namespace Cattering
             this.ch6 = new System.Windows.Forms.CheckBox();
             this.ch5 = new System.Windows.Forms.CheckBox();
             this.ch4 = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesrecordgrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -95,9 +99,9 @@ namespace Cattering
             this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(134, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(423, 29);
+            this.label2.Size = new System.Drawing.Size(208, 29);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Counter Sales Form - SHAYAN CATTERERS";
+            this.label2.Text = "Counter Sales Form";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView1
@@ -218,7 +222,7 @@ namespace Cattering
             this.unittype.Items.AddRange(new object[] {
             "Per Person",
             "Per KG"});
-            this.unittype.Location = new System.Drawing.Point(1064, 3);
+            this.unittype.Location = new System.Drawing.Point(551, 4);
             this.unittype.Name = "unittype";
             this.unittype.Size = new System.Drawing.Size(120, 27);
             this.unittype.TabIndex = 1;
@@ -311,6 +315,7 @@ namespace Cattering
             this.GST.TabIndex = 15;
             this.GST.Text = "0";
             this.GST.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.GST.TextChanged += new System.EventHandler(this.GST_TextChanged);
             // 
             // Discount
             // 
@@ -444,9 +449,9 @@ namespace Cattering
             this.btnreset.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnreset.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnreset.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnreset.Location = new System.Drawing.Point(983, 4);
+            this.btnreset.Location = new System.Drawing.Point(551, 35);
             this.btnreset.Name = "btnreset";
-            this.btnreset.Size = new System.Drawing.Size(75, 26);
+            this.btnreset.Size = new System.Drawing.Size(120, 26);
             this.btnreset.TabIndex = 0;
             this.btnreset.Text = "New Sales";
             this.btnreset.UseVisualStyleBackColor = false;
@@ -532,16 +537,6 @@ namespace Cattering
             this.ch3.Text = "Biryani / Palao";
             this.ch3.UseVisualStyleBackColor = true;
             this.ch3.Click += new System.EventHandler(this.ch3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Cattering.Properties.Resources.SC_Logo_SW;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
             // 
             // print
             // 
@@ -679,11 +674,61 @@ namespace Cattering
             this.ch4.UseVisualStyleBackColor = true;
             this.ch4.Click += new System.EventHandler(this.ch4_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cattering.Properties.Resources.SC_Logo_SW;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 73;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Cattering.Properties.Resources.WhatsApp_Image_2022_03_05_at_4_32_07_PM;
+            this.pictureBox2.Location = new System.Drawing.Point(677, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(561, 58);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 72;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(418, 638);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(120, 26);
+            this.button3.TabIndex = 74;
+            this.button3.Text = "Item Wise Sales";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(418, 670);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(120, 26);
+            this.button4.TabIndex = 75;
+            this.button4.Text = "Complete Sales";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Counter_Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1250, 928);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ch11);
             this.Controls.Add(this.ch10);
             this.Controls.Add(this.ch9);
@@ -728,7 +773,6 @@ namespace Cattering
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Counter_Sales";
@@ -737,16 +781,15 @@ namespace Cattering
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Counter_Sales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesrecordgrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ListView listView1;
@@ -799,5 +842,9 @@ namespace Cattering
         private System.Windows.Forms.CheckBox ch6;
         private System.Windows.Forms.CheckBox ch5;
         private System.Windows.Forms.CheckBox ch4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

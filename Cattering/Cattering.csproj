@@ -106,6 +106,12 @@
     <Compile Include="admin_window.Designer.cs">
       <DependentUpon>admin_window.cs</DependentUpon>
     </Compile>
+    <Compile Include="Complete_Sales_Records.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Complete_Sales_Records.Designer.cs">
+      <DependentUpon>Complete_Sales_Records.cs</DependentUpon>
+    </Compile>
     <Compile Include="Costing_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="Counter_Sales.Designer.cs">
       <DependentUpon>Counter_Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cover_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cover_Page.Designer.cs">
+      <DependentUpon>Cover_Page.cs</DependentUpon>
     </Compile>
     <Compile Include="Credit_Control.cs">
       <SubType>Form</SubType>
@@ -253,12 +265,21 @@
     <Compile Include="P_Invoice.Designer.cs">
       <DependentUpon>P_Invoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales_Report_Item_Wise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales_Report_Item_Wise.Designer.cs">
+      <DependentUpon>Sales_Report_Item_Wise.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="AddNewDishName.resx">
       <DependentUpon>AddNewDishName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin_window.resx">
       <DependentUpon>admin_window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Complete_Sales_Records.resx">
+      <DependentUpon>Complete_Sales_Records.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Costing_Form.resx">
       <DependentUpon>Costing_Form.cs</DependentUpon>
@@ -268,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Counter_Sales.resx">
       <DependentUpon>Counter_Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cover_Page.resx">
+      <DependentUpon>Cover_Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Credit_Control.resx">
       <DependentUpon>Credit_Control.cs</DependentUpon>
@@ -328,6 +352,9 @@
     <EmbeddedResource Include="Report8.rdlc" />
     <EmbeddedResource Include="Report9.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales_Report_Item_Wise.resx">
+      <DependentUpon>Sales_Report_Item_Wise.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Content\bold-reports\bootstrap4\icons\ejicons.eot" />
     <None Include="Content\bold-reports\bootstrap4\icons\ejicons.ttf" />
@@ -629,6 +656,8 @@
     <Content Include="Content\bold-reports\office-365\images\waitingpopup.gif" />
     <None Include="Resources\loginform.png" />
     <Compile Include="LocalReportExtensions.cs" />
+    <None Include="Resources\WhatsApp Image 2022-03-05 at 4.32.10 PM.jpeg" />
+    <None Include="Resources\WhatsApp Image 2022-03-05 at 4.32.07 PM.jpeg" />
     <Content Include="SC_Img.jpg" />
     <Content Include="Scripts\bold-reports\bold.report-designer.min.js" />
     <Content Include="Scripts\bold-reports\bold.report-viewer.min.js" />

@@ -35,22 +35,49 @@ namespace Cattering
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(printslip));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet8 = new Cattering.DataSet8();
             this.OrdersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataTable1TableAdapter = new Cattering.DataSet8TableAdapters.DataTable1TableAdapter();
             this.OrdersTableAdapter = new Cattering.DataSet8TableAdapters.OrdersTableAdapter();
-            this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataTable2TableAdapter = new Cattering.DataSet8TableAdapters.DataTable2TableAdapter();
-            this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.invoiceTableAdapter = new Cattering.DataSet8TableAdapters.invoiceTableAdapter();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.DataSet8;
+            // 
+            // DataSet8
+            // 
+            this.DataSet8.DataSetName = "DataSet8";
+            this.DataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // OrdersBindingSource
+            // 
+            this.OrdersBindingSource.DataMember = "Orders";
+            this.OrdersBindingSource.DataSource = this.DataSet8;
+            // 
+            // DataTable2BindingSource
+            // 
+            this.DataTable2BindingSource.DataMember = "DataTable2";
+            this.DataTable2BindingSource.DataSource = this.DataSet8;
+            // 
+            // invoiceBindingSource
+            // 
+            this.invoiceBindingSource.DataMember = "invoice";
+            this.invoiceBindingSource.DataSource = this.DataSet8;
             // 
             // reportViewer1
             // 
@@ -75,21 +102,6 @@ namespace Cattering
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.DataSet8;
-            // 
-            // DataSet8
-            // 
-            this.DataSet8.DataSetName = "DataSet8";
-            this.DataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // OrdersBindingSource
-            // 
-            this.OrdersBindingSource.DataMember = "Orders";
-            this.OrdersBindingSource.DataSource = this.DataSet8;
-            // 
             // DataTable1TableAdapter
             // 
             this.DataTable1TableAdapter.ClearBeforeFill = true;
@@ -98,23 +110,28 @@ namespace Cattering
             // 
             this.OrdersTableAdapter.ClearBeforeFill = true;
             // 
-            // DataTable2BindingSource
-            // 
-            this.DataTable2BindingSource.DataMember = "DataTable2";
-            this.DataTable2BindingSource.DataSource = this.DataSet8;
-            // 
             // DataTable2TableAdapter
             // 
             this.DataTable2TableAdapter.ClearBeforeFill = true;
             // 
-            // invoiceBindingSource
-            // 
-            this.invoiceBindingSource.DataMember = "invoice";
-            this.invoiceBindingSource.DataSource = this.DataSet8;
-            // 
             // invoiceTableAdapter
             // 
             this.invoiceTableAdapter.ClearBeforeFill = true;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            
             // 
             // printslip
             // 
@@ -147,5 +164,7 @@ namespace Cattering
         private System.Windows.Forms.BindingSource invoiceBindingSource;
         private DataSet8TableAdapters.DataTable2TableAdapter DataTable2TableAdapter;
         private DataSet8TableAdapters.invoiceTableAdapter invoiceTableAdapter;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
