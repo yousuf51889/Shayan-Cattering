@@ -38,7 +38,9 @@ namespace Cattering
             this.sales = new System.Windows.Forms.Label();
             this.exp = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -122,11 +124,22 @@ namespace Cattering
             this.label2.TabIndex = 7;
             this.label2.Text = "Cash Expense";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cattering.Properties.Resources.WhatsApp_Image_2022_03_05_at_4_32_07_PM;
+            this.pictureBox1.Location = new System.Drawing.Point(623, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(476, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // Sales_Report_Item_Wise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 629);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.exp);
             this.Controls.Add(this.sales);
@@ -140,6 +153,7 @@ namespace Cattering
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_Report_Item_Wise";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +169,6 @@ namespace Cattering
         private System.Windows.Forms.Label sales;
         private System.Windows.Forms.Label exp;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

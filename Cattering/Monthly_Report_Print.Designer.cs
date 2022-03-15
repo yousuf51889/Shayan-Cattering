@@ -30,43 +30,23 @@ namespace Cattering
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Monthly_Report_Print));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet7 = new Cattering.DataSet7();
-            this.DataTable1TableAdapter = new Cattering.DataSet7TableAdapters.DataTable1TableAdapter();
             this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataTable2TableAdapter = new Cattering.DataSet7TableAdapters.DataTable2TableAdapter();
             this.DataTable3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DataTable1TableAdapter = new Cattering.DataSet7TableAdapters.DataTable1TableAdapter();
+            this.DataTable2TableAdapter = new Cattering.DataSet7TableAdapters.DataTable2TableAdapter();
             this.DataTable3TableAdapter = new Cattering.DataSet7TableAdapters.DataTable3TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable3BindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable1BindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.DataTable2BindingSource;
-            reportDataSource3.Name = "DataSet3";
-            reportDataSource3.Value = this.DataTable3BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Cattering.Report8.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(830, 837);
-            this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // DataTable1BindingSource
             // 
@@ -78,23 +58,43 @@ namespace Cattering
             this.DataSet7.DataSetName = "DataSet7";
             this.DataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // DataTable1TableAdapter
-            // 
-            this.DataTable1TableAdapter.ClearBeforeFill = true;
-            // 
             // DataTable2BindingSource
             // 
             this.DataTable2BindingSource.DataMember = "DataTable2";
             this.DataTable2BindingSource.DataSource = this.DataSet7;
             // 
-            // DataTable2TableAdapter
-            // 
-            this.DataTable2TableAdapter.ClearBeforeFill = true;
-            // 
             // DataTable3BindingSource
             // 
             this.DataTable3BindingSource.DataMember = "DataTable3";
             this.DataTable3BindingSource.DataSource = this.DataSet7;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.DataTable1BindingSource;
+            reportDataSource5.Name = "DataSet2";
+            reportDataSource5.Value = this.DataTable2BindingSource;
+            reportDataSource6.Name = "DataSet3";
+            reportDataSource6.Value = this.DataTable3BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Cattering.Report8.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(830, 837);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            // 
+            // DataTable1TableAdapter
+            // 
+            this.DataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // DataTable2TableAdapter
+            // 
+            this.DataTable2TableAdapter.ClearBeforeFill = true;
             // 
             // DataTable3TableAdapter
             // 

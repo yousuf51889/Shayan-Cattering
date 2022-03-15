@@ -98,7 +98,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(117, 12);
+            this.label4.Location = new System.Drawing.Point(42, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(185, 39);
             this.label4.TabIndex = 0;
@@ -106,10 +106,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Cattering.Properties.Resources.SClogo1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Image = global::Cattering.Properties.Resources.WhatsApp_Image_2022_03_05_at_4_32_07_PM;
+            this.pictureBox1.Location = new System.Drawing.Point(462, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(336, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -143,10 +143,10 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(342, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(342, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(456, 281);
+            this.dataGridView1.Size = new System.Drawing.Size(456, 246);
             this.dataGridView1.TabIndex = 4;
             // 
             // comboBox1
@@ -284,6 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(804, 298);
             this.Controls.Add(this.txtdisc);
             this.Controls.Add(this.txtgst);

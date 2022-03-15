@@ -224,11 +224,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet7.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataSet8.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet8.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Kitchen_Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,12 +259,6 @@
     </Compile>
     <Compile Include="Payment_Vouchers.Designer.cs">
       <DependentUpon>Payment_Vouchers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="printslip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="printslip.Designer.cs">
-      <DependentUpon>printslip.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -346,9 +335,6 @@
     <EmbeddedResource Include="Payment_Vouchers.resx">
       <DependentUpon>Payment_Vouchers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="printslip.resx">
-      <DependentUpon>printslip.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -370,9 +356,6 @@
     <EmbeddedResource Include="Report6.rdlc" />
     <EmbeddedResource Include="Report7.rdlc" />
     <EmbeddedResource Include="Report8.rdlc" />
-    <EmbeddedResource Include="Report9.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Sales_Report_Item_Wise.resx">
       <DependentUpon>Sales_Report_Item_Wise.cs</DependentUpon>
     </EmbeddedResource>
@@ -470,17 +453,6 @@
     </None>
     <None Include="DataSet7.xss">
       <DependentUpon>DataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet8.xsc">
-      <DependentUpon>DataSet8.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet8.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet8.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet8.xss">
-      <DependentUpon>DataSet8.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

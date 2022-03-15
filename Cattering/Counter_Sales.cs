@@ -18,8 +18,10 @@ namespace Cattering
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-661JC43\SQLEXPRESS;Initial Catalog=cattering;Integrated Security=True");
 
         public static string orderidcounter;
+        public static string orderno;
 
-        public static int x = 0;
+
+        public static int x = 1;
         public static int y;
 
         public Counter_Sales()
@@ -230,8 +232,8 @@ namespace Cattering
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            x = 0;
-            qty.Text = "0";
+            x = 1;
+            qty.Text = "1";
             rates.Text = "";
 
             item.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -362,11 +364,16 @@ namespace Cattering
                 ttdisc = Convert.ToDecimal(Discount.Text);
                 ttgrttl = Convert.ToDecimal(Grand_Total.Text);
 
-                ttgst = tt1 / 100 * 13;
+                ttgst = 0;
+
+                // GST Calculation as below
+                // ttgst = tt1 / 100 * 13;
+
                 ttgrttl = (tt1 + ttgst) - ttdisc;
 
                 GST.Text = ttgst.ToString();
                 Grand_Total.Text = ttgrttl.ToString();
+
             }
 
 
@@ -655,6 +662,7 @@ namespace Cattering
 
         private void loadorderidnumberforcounterslipprint() 
         {
+
             con.Open();
             String query1 = "select top 1 cus_id from customer where cus_id like 'SCCS%' order by cus_no desc";
             SqlCommand cmd1 = new SqlCommand(query1, con);
@@ -667,27 +675,29 @@ namespace Cattering
             read.Close();
             con.Close();
         }
-
-
+                
 
         private void print_Click(object sender, EventArgs e)
         {
+                                   
             loadorderidnumberforcounterslipprint();
-            printslip prntslip = new printslip();
-            prntslip.Show();
+            orderno = orderidcounter;
+            printDocument1.Print();
+            printDocument2.Print();
 
-                       
         }
 
         private void salesrecordgrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (salesrecordgrid.Columns[e.ColumnIndex].HeaderText == "Slip_Print")
             {
-                orderidcounter = salesrecordgrid.SelectedRows[0].Cells[1].Value.ToString();
-                printslip prntslip = new printslip();
-                prntslip.Show();
+                //orderidcounter = "orderidcounter";
 
-                
+                orderno = salesrecordgrid.SelectedRows[0].Cells[1].Value.ToString();
+                printDocument1.Print();
+                printDocument2.Print();
+
+
             }
         }
 
@@ -835,6 +845,194 @@ namespace Cattering
         {
             Complete_Sales_Records csrc = new Complete_Sales_Records();
             csrc.Show();
+        }
+
+        
+        string customername;
+        string orderdate;
+        string itemname;
+        int itemqty;
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            con.Open();
+            String query4 = "select Orders.order_no,customer.cus_name,Orders.order_date,Orders.order_itemname,order_qty from Orders inner join customer on Orders.order_no=customer.cus_id where Orders.order_no = '" + orderno + "' ";
+            SqlCommand cmd4 = new SqlCommand(query4, con);
+            SqlDataReader read = cmd4.ExecuteReader();
+
+            while (read.Read())
+            {
+                customername = (read[1].ToString());
+                orderdate = (read[2].ToString());
+                itemname = (read[3].ToString());
+                itemqty = Convert.ToInt32(read[4].ToString());
+
+            }
+
+            int oldmargin = 0;
+            e.Graphics.DrawString("SHAYAN CATTERERS", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(25, 55));
+            e.Graphics.DrawString(" Kitchen Slip ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(25, 75));
+            e.Graphics.DrawString("--------------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(25, 85));
+
+            e.Graphics.DrawString(customername.ToString(), new Font("Arial", 10), Brushes.Black, new Point(25, 95));
+            e.Graphics.DrawString(orderdate, new Font("Arial", 10), Brushes.Black, new Point(25, 115));
+            e.Graphics.DrawString("--------------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(25, oldmargin + 125));
+            e.Graphics.DrawString("Item Name", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(25, oldmargin + 135));
+            e.Graphics.DrawString("Qty", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(250, oldmargin + 135));
+            e.Graphics.DrawString("--------------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(25, oldmargin + 145));
+
+            read.Close();
+            con.Close();
+
+            int margline = 160;
+
+            con.Open();
+            String query41 = "select Orders.order_no,customer.cus_name,Orders.order_date,Orders.order_itemname,order_qty from Orders inner join customer on Orders.order_no=customer.cus_id where Orders.order_no = '" + orderno + "' ";
+            SqlCommand cmd41 = new SqlCommand(query4, con);
+            SqlDataReader read1 = cmd41.ExecuteReader();
+
+            while (read1.Read())
+            {
+
+                itemname = (read1[3].ToString());
+                itemqty = Convert.ToInt32(read1[4].ToString());
+
+                e.Graphics.DrawString(itemname.ToString(), new Font("Arial", 10), Brushes.Black, new Point(25, margline));
+                e.Graphics.DrawString(itemqty.ToString(), new Font("Arial", 10), Brushes.Black, new Point(250, margline));
+                margline = margline + 20;
+
+            }
+            e.Graphics.DrawString("--------------------------------------------------------------", new Font("Arial", 10), Brushes.Black, new Point(25, margline));
+            e.Graphics.DrawString("Please Show this Slip to Counter / Kitchen", new Font("Arial", 10), Brushes.Black, new Point(25, margline + 20));
+
+
+            read1.Close();
+            con.Close();
+        }
+
+        private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bmp = Properties.Resources.shayan_catt_logoo;
+            Image newimage = bmp;
+            e.Graphics.DrawImage(newimage, 85, 1, 100, 100);
+
+            e.Graphics.DrawString("SHAYAN CATTERERS", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(25, 105));
+            e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(20, 125));
+            e.Graphics.DrawString(" Shop No 02 Mustafa Garden", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(45, 145));
+            e.Graphics.DrawString("Soldier Bazar No 02 Karachi", new Font("Arial", 10), Brushes.Black, new Point(55, 160));
+            e.Graphics.DrawString("PTCL No : 021 - 32229806", new Font("Arial", 10), Brushes.Black, new Point(60, 175));
+            e.Graphics.DrawString("STRN # S3202855-5 ", new Font("Arial", 10), Brushes.Black, new Point(80, 190));
+            e.Graphics.DrawString("NTN # 3202855-5 ", new Font("Arial", 10), Brushes.Black, new Point(90, 205));
+
+            e.Graphics.DrawString("SOLDIER BAZAR", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new Point(65, 225));
+            e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(20, 240));
+
+            con.Open();
+            String query4 = "select customer.cus_name,Orders.order_date,customer.userid from Orders inner join customer on Orders.order_no=customer.cus_id where Orders.order_no = '" + orderno + "' ";
+            SqlCommand cmd4 = new SqlCommand(query4, con);
+            SqlDataReader read = cmd4.ExecuteReader();
+
+            String name1 = "";
+            String orderdate1 = "";
+            string user = "";
+            while (read.Read())
+            {
+                name1 = (read[0].ToString());
+                orderdate1 = (read[1].ToString());
+                user = (read[2].ToString());
+            }
+            read.Close();
+            con.Close();
+
+            e.Graphics.DrawString("Customer : " + name1.ToString(), new Font("Arial", 09), Brushes.Black, new Point(20, 250));
+
+            e.Graphics.DrawString("Date : " + orderdate1.ToString(), new Font("Arial", 09), Brushes.Black, new Point(20, 270));
+
+            e.Graphics.DrawString("USER : " + user.ToString(), new Font("Arial", 09), Brushes.Black, new Point(20, 290));
+
+
+            e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(20, 305));
+            e.Graphics.DrawString("Item", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(25, 315));
+            e.Graphics.DrawString("Qty", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(130, 315));
+            e.Graphics.DrawString("Rates", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(165, 315));
+            e.Graphics.DrawString("Amount", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(210, 315));
+            e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(20, 320));
+
+            int margline = 340;
+            int submargline = 360;
+            con.Open();
+            String query5 = "select order_itemname,order_qty,order_itemrates,order_itemperunitrate from Orders where Orders.order_no = '" + orderno + "' ";
+            SqlCommand cmd5 = new SqlCommand(query5, con);
+            SqlDataReader read1 = cmd5.ExecuteReader();
+
+            String itemname1 = "";
+            String qty1 = "";
+            string rates1 = "";
+            string amount1 = "";
+            while (read1.Read())
+            {
+                itemname1 = (read1[0].ToString());
+                qty1 = (read1[1].ToString());
+                rates1 = (read1[2].ToString());
+                amount1 = (read1[3].ToString());
+
+                e.Graphics.DrawString(itemname1.ToString(), new Font("Arial", 10), Brushes.Black, new Point(25, margline));
+                e.Graphics.DrawString(qty1.ToString(), new Font("Arial", 10), Brushes.Black, new Point(130, submargline));
+                e.Graphics.DrawString(rates1.ToString(), new Font("Arial", 10), Brushes.Black, new Point(165, submargline));
+                e.Graphics.DrawString(amount1.ToString(), new Font("Arial", 10), Brushes.Black, new Point(210, submargline));
+                margline = margline + 40;
+                submargline = submargline + 40;
+            }
+            read1.Close();
+            con.Close();
+            e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(20, submargline));
+
+            con.Open();
+            String query55 = "select SUM(Orders.order_itemperunitrate) as Sub_Total,invoice.invoice_disc,invoice.invoice_value,invoice.invoice_adv from invoice inner join orders on invoice.invoicenum = Orders.order_no where Orders.order_no = '" + orderno + "' group by invoice.invoice_disc,invoice.invoice_value,invoice.invoice_adv  ";
+            SqlCommand cmd55 = new SqlCommand(query55, con);
+            SqlDataReader read15 = cmd55.ExecuteReader();
+
+            String subtotal = "";
+            String invdisc = "";
+            string invvalue = "";
+            string invcashrec = "";
+            int cashpaid = 0;
+            int invamount = 0;
+            int invchange = 0;
+            while (read15.Read())
+            {
+                subtotal = (read15[0].ToString());
+                invdisc = (read15[1].ToString());
+                invvalue = (read15[2].ToString());
+                invcashrec = (read15[3].ToString());
+                invamount = Convert.ToInt16(read15[2].ToString());
+                cashpaid = Convert.ToInt16(read15[3].ToString());
+                invchange = cashpaid - invamount;
+            }
+
+            e.Graphics.DrawString("SUB TOTAL : ", new Font("Arial", 10), Brushes.Black, new Point(20, submargline + 20));
+            e.Graphics.DrawString(subtotal.ToString(), new Font("Arial", 10), Brushes.Black, new Point(210, submargline + 20));
+            e.Graphics.DrawString("DISCOUNT : ", new Font("Arial", 10), Brushes.Black, new Point(20, submargline + 40));
+            e.Graphics.DrawString(invdisc.ToString(), new Font("Arial", 10), Brushes.Black, new Point(210, submargline + 40));
+            e.Graphics.DrawString("INVOICE VALUE : ", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(20, submargline + 60));
+            e.Graphics.DrawString(invvalue.ToString(), new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(210, submargline + 60));
+            e.Graphics.DrawString("CASH PAID : ", new Font("Arial", 10), Brushes.Black, new Point(20, submargline + 80));
+            e.Graphics.DrawString(invcashrec.ToString(), new Font("Arial", 10), Brushes.Black, new Point(210, submargline + 80));
+            e.Graphics.DrawString("CHANGE : ", new Font("Arial", 10), Brushes.Black, new Point(20, submargline + 100));
+            e.Graphics.DrawString(invchange.ToString(), new Font("Arial", 10), Brushes.Black, new Point(210, submargline + 100));
+
+            read15.Close();
+            con.Close();
+            e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(20, submargline + 110));
+            e.Graphics.DrawString("Terms and Conditions : ", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(20, submargline + 120));
+            e.Graphics.DrawString("1.Please Check Your Remaining Amount : ", new Font("Arial", 08), Brushes.Black, new Point(20, submargline + 140));
+            e.Graphics.DrawString("2.Please Check Items Before Leaving Counter : ", new Font("Arial", 08), Brushes.Black, new Point(20, submargline + 155));
+            e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(20, submargline + 160));
+            e.Graphics.DrawString(" Thanks For Choosing Us ", new Font("Arial", 08), Brushes.Black, new Point(70, submargline + 175));
+            e.Graphics.DrawString(" For Complaint and Suggestions ", new Font("Arial", 08), Brushes.Black, new Point(60, submargline + 190));
+            e.Graphics.DrawString(" 021 - 32229806 ", new Font("Arial", 08), Brushes.Black, new Point(100, submargline + 205));
+            e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(20, submargline + 210));
+            e.Graphics.DrawString(" Developed by DEVRAJ-TECH 0308-2787745 ", new Font("Arial", 08), Brushes.Black, new Point(20, submargline + 220));
         }
     }
 }

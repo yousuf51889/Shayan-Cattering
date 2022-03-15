@@ -47,14 +47,16 @@ namespace Cattering
             this.insert = new System.Windows.Forms.Button();
             this.TCost = new System.Windows.Forms.Label();
             this.costprint = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ordercostinggrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordercostgrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // costingorderid
             // 
             this.costingorderid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costingorderid.Location = new System.Drawing.Point(85, 12);
+            this.costingorderid.Location = new System.Drawing.Point(95, 24);
             this.costingorderid.Name = "costingorderid";
             this.costingorderid.ReadOnly = true;
             this.costingorderid.Size = new System.Drawing.Size(172, 22);
@@ -64,7 +66,7 @@ namespace Cattering
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(22, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 16);
             this.label1.TabIndex = 1;
@@ -76,8 +78,9 @@ namespace Cattering
             this.ordercostinggrid.AllowUserToDeleteRows = false;
             this.ordercostinggrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ordercostinggrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ordercostinggrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.ordercostinggrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ordercostinggrid.Location = new System.Drawing.Point(12, 44);
+            this.ordercostinggrid.Location = new System.Drawing.Point(12, 67);
             this.ordercostinggrid.Name = "ordercostinggrid";
             this.ordercostinggrid.ReadOnly = true;
             this.ordercostinggrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -91,8 +94,9 @@ namespace Cattering
             this.ordercostgrid.AllowUserToDeleteRows = false;
             this.ordercostgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ordercostgrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ordercostgrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.ordercostgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ordercostgrid.Location = new System.Drawing.Point(12, 283);
+            this.ordercostgrid.Location = new System.Drawing.Point(12, 306);
             this.ordercostgrid.Name = "ordercostgrid";
             this.ordercostgrid.ReadOnly = true;
             this.ordercostgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -102,7 +106,7 @@ namespace Cattering
             // costorderitem
             // 
             this.costorderitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costorderitem.Location = new System.Drawing.Point(12, 247);
+            this.costorderitem.Location = new System.Drawing.Point(12, 270);
             this.costorderitem.Name = "costorderitem";
             this.costorderitem.Size = new System.Drawing.Size(349, 22);
             this.costorderitem.TabIndex = 4;
@@ -110,7 +114,7 @@ namespace Cattering
             // costitemcost
             // 
             this.costitemcost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costitemcost.Location = new System.Drawing.Point(367, 247);
+            this.costitemcost.Location = new System.Drawing.Point(367, 270);
             this.costitemcost.Name = "costitemcost";
             this.costitemcost.Size = new System.Drawing.Size(143, 22);
             this.costitemcost.TabIndex = 5;
@@ -119,7 +123,7 @@ namespace Cattering
             // costitemrates
             // 
             this.costitemrates.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costitemrates.Location = new System.Drawing.Point(516, 247);
+            this.costitemrates.Location = new System.Drawing.Point(516, 270);
             this.costitemrates.Name = "costitemrates";
             this.costitemrates.Size = new System.Drawing.Size(143, 22);
             this.costitemrates.TabIndex = 6;
@@ -128,7 +132,7 @@ namespace Cattering
             // costitemamount
             // 
             this.costitemamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costitemamount.Location = new System.Drawing.Point(665, 247);
+            this.costitemamount.Location = new System.Drawing.Point(665, 270);
             this.costitemamount.Name = "costitemamount";
             this.costitemamount.Size = new System.Drawing.Size(143, 22);
             this.costitemamount.TabIndex = 7;
@@ -137,7 +141,7 @@ namespace Cattering
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 228);
+            this.label2.Location = new System.Drawing.Point(12, 251);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 16);
             this.label2.TabIndex = 8;
@@ -147,7 +151,7 @@ namespace Cattering
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(368, 228);
+            this.label3.Location = new System.Drawing.Point(368, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 8;
@@ -157,7 +161,7 @@ namespace Cattering
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(514, 228);
+            this.label4.Location = new System.Drawing.Point(514, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 8;
@@ -167,7 +171,7 @@ namespace Cattering
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(665, 228);
+            this.label5.Location = new System.Drawing.Point(665, 251);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
             this.label5.TabIndex = 8;
@@ -177,7 +181,7 @@ namespace Cattering
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 202);
+            this.label6.Location = new System.Drawing.Point(12, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 16);
             this.label6.TabIndex = 1;
@@ -186,7 +190,7 @@ namespace Cattering
             // ordercostingdorderitem
             // 
             this.ordercostingdorderitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordercostingdorderitem.Location = new System.Drawing.Point(95, 200);
+            this.ordercostingdorderitem.Location = new System.Drawing.Point(95, 223);
             this.ordercostingdorderitem.Name = "ordercostingdorderitem";
             this.ordercostingdorderitem.ReadOnly = true;
             this.ordercostingdorderitem.Size = new System.Drawing.Size(266, 22);
@@ -195,7 +199,7 @@ namespace Cattering
             // insert
             // 
             this.insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insert.Location = new System.Drawing.Point(814, 246);
+            this.insert.Location = new System.Drawing.Point(814, 269);
             this.insert.Name = "insert";
             this.insert.Size = new System.Drawing.Size(75, 23);
             this.insert.TabIndex = 10;
@@ -207,7 +211,7 @@ namespace Cattering
             // 
             this.TCost.AutoSize = true;
             this.TCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TCost.Location = new System.Drawing.Point(263, 14);
+            this.TCost.Location = new System.Drawing.Point(273, 26);
             this.TCost.Name = "TCost";
             this.TCost.Size = new System.Drawing.Size(91, 20);
             this.TCost.TabIndex = 11;
@@ -216,7 +220,7 @@ namespace Cattering
             // costprint
             // 
             this.costprint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costprint.Location = new System.Drawing.Point(895, 283);
+            this.costprint.Location = new System.Drawing.Point(895, 306);
             this.costprint.Name = "costprint";
             this.costprint.Size = new System.Drawing.Size(120, 61);
             this.costprint.TabIndex = 12;
@@ -224,12 +228,23 @@ namespace Cattering
             this.costprint.UseVisualStyleBackColor = true;
             this.costprint.Click += new System.EventHandler(this.costprint_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cattering.Properties.Resources.WhatsApp_Image_2022_03_05_at_4_32_07_PM;
+            this.pictureBox1.Location = new System.Drawing.Point(547, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(567, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // Costing_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1131, 476);
+            this.ClientSize = new System.Drawing.Size(1118, 476);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.costprint);
             this.Controls.Add(this.TCost);
             this.Controls.Add(this.insert);
@@ -254,6 +269,7 @@ namespace Cattering
             this.Load += new System.EventHandler(this.Costing_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ordercostinggrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordercostgrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +294,6 @@ namespace Cattering
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Label TCost;
         private System.Windows.Forms.Button costprint;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

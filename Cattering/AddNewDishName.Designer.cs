@@ -52,7 +52,7 @@ namespace Cattering
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(228, 29);
             this.label1.TabIndex = 1;
@@ -116,7 +116,7 @@ namespace Cattering
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(556, 99);
+            this.button1.Location = new System.Drawing.Point(552, 128);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 35);
             this.button1.TabIndex = 3;
@@ -145,7 +145,7 @@ namespace Cattering
             // editdishnamebtn
             // 
             this.editdishnamebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editdishnamebtn.Location = new System.Drawing.Point(556, 152);
+            this.editdishnamebtn.Location = new System.Drawing.Point(552, 181);
             this.editdishnamebtn.Name = "editdishnamebtn";
             this.editdishnamebtn.Size = new System.Drawing.Size(109, 36);
             this.editdishnamebtn.TabIndex = 5;
@@ -156,7 +156,7 @@ namespace Cattering
             // resetbtn
             // 
             this.resetbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetbtn.Location = new System.Drawing.Point(556, 44);
+            this.resetbtn.Location = new System.Drawing.Point(552, 73);
             this.resetbtn.Name = "resetbtn";
             this.resetbtn.Size = new System.Drawing.Size(109, 35);
             this.resetbtn.TabIndex = 6;
@@ -166,10 +166,10 @@ namespace Cattering
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Cattering.Properties.Resources.SC_Logo_SW;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Image = global::Cattering.Properties.Resources.WhatsApp_Image_2022_03_05_at_4_32_07_PM;
+            this.pictureBox1.Location = new System.Drawing.Point(354, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(323, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;

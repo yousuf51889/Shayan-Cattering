@@ -1504,50 +1504,6 @@
         <rd:TableAdapterName>DataTable3TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="DataSet4">
-      <Query>
-        <DataSourceName>DataSet8</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="cus_id">
-          <DataField>cus_id</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cus_name">
-          <DataField>cus_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="order_date">
-          <DataField>order_date</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="cus_address">
-          <DataField>cus_address</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cus_totalbill">
-          <DataField>cus_totalbill</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="userid">
-          <DataField>userid</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="branch_name">
-          <DataField>branch_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet8</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\HUSSAIN\source\repos\Cattering\Cattering\DataSet8.xsd</rd:SchemaPath>
-        <rd:TableName>DataTable1</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>DataTable1TableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
   </DataSets>
   <EmbeddedImages>
     <EmbeddedImage Name="logo">

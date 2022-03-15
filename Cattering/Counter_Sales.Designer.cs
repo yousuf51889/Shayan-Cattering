@@ -29,7 +29,7 @@ namespace Cattering
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Counter_Sales));
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -87,6 +87,10 @@ namespace Cattering
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument2 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesrecordgrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -120,15 +124,15 @@ namespace Cattering
             this.dataGridView1.Location = new System.Drawing.Point(314, 64);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(913, 344);
             this.dataGridView1.TabIndex = 28;
@@ -464,7 +468,7 @@ namespace Cattering
             this.insertorder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.insertorder.Location = new System.Drawing.Point(1150, 452);
             this.insertorder.Name = "insertorder";
-            this.insertorder.Size = new System.Drawing.Size(75, 61);
+            this.insertorder.Size = new System.Drawing.Size(75, 51);
             this.insertorder.TabIndex = 20;
             this.insertorder.Text = "Insert Order";
             this.insertorder.UseVisualStyleBackColor = false;
@@ -543,9 +547,9 @@ namespace Cattering
             this.print.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.print.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.print.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.print.Location = new System.Drawing.Point(1150, 524);
+            this.print.Location = new System.Drawing.Point(1150, 507);
             this.print.Name = "print";
-            this.print.Size = new System.Drawing.Size(75, 61);
+            this.print.Size = new System.Drawing.Size(75, 48);
             this.print.TabIndex = 54;
             this.print.Text = "Print";
             this.print.UseVisualStyleBackColor = false;
@@ -699,9 +703,9 @@ namespace Cattering
             this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(418, 638);
+            this.button3.Location = new System.Drawing.Point(1150, 561);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 26);
+            this.button3.Size = new System.Drawing.Size(77, 54);
             this.button3.TabIndex = 74;
             this.button3.Text = "Item Wise Sales";
             this.button3.UseVisualStyleBackColor = false;
@@ -712,20 +716,48 @@ namespace Cattering
             this.button4.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(418, 670);
+            this.button4.Location = new System.Drawing.Point(1150, 621);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 26);
+            this.button4.Size = new System.Drawing.Size(77, 55);
             this.button4.TabIndex = 75;
             this.button4.Text = "Complete Sales";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument2
+            // 
+            this.printDocument2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument2_PrintPage);
+            // 
+            // printPreviewDialog2
+            // 
+            this.printPreviewDialog2.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog2.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog2.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog2.Enabled = true;
+            this.printPreviewDialog2.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog2.Icon")));
+            this.printPreviewDialog2.Name = "printPreviewDialog2";
+            this.printPreviewDialog2.Visible = false;
             // 
             // Counter_Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1250, 749);
+            this.ClientSize = new System.Drawing.Size(1302, 906);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
@@ -847,5 +879,9 @@ namespace Cattering
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument2;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
     }
 }

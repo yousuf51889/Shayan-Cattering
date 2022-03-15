@@ -53,7 +53,9 @@ namespace Cattering
             this.txtpaymode = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtpaystatus = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.balanceinvgrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Ordertxtbox
@@ -187,7 +189,7 @@ namespace Cattering
             // updbalance
             // 
             this.updbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updbalance.Location = new System.Drawing.Point(740, 332);
+            this.updbalance.Location = new System.Drawing.Point(17, 365);
             this.updbalance.Name = "updbalance";
             this.updbalance.Size = new System.Drawing.Size(115, 27);
             this.updbalance.TabIndex = 36;
@@ -232,6 +234,7 @@ namespace Cattering
             this.balanceinvgrid.AllowUserToDeleteRows = false;
             this.balanceinvgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.balanceinvgrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.balanceinvgrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.balanceinvgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.balanceinvgrid.Location = new System.Drawing.Point(133, 84);
             this.balanceinvgrid.Name = "balanceinvgrid";
@@ -292,11 +295,23 @@ namespace Cattering
             this.txtpaystatus.Size = new System.Drawing.Size(414, 28);
             this.txtpaystatus.TabIndex = 45;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cattering.Properties.Resources.WhatsApp_Image_2022_03_05_at_4_32_07_PM;
+            this.pictureBox1.Location = new System.Drawing.Point(437, 331);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(421, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabStop = false;
+            // 
             // Customer_Balance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 371);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(867, 396);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtpaystatus);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtpaymode);
@@ -326,6 +341,7 @@ namespace Cattering
             this.Text = "Customer_Balance";
             this.Load += new System.EventHandler(this.Customer_Balance_Load);
             ((System.ComponentModel.ISupportInitialize)(this.balanceinvgrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +372,6 @@ namespace Cattering
         private System.Windows.Forms.ComboBox txtpaymode;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox txtpaystatus;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

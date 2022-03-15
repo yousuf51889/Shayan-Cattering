@@ -33,12 +33,12 @@ namespace Cattering
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
             this.loadrpt = new System.Windows.Forms.Button();
             this.cusid = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,18 @@ namespace Cattering
             this.dataGridView1.TabIndex = 36;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // Print
+            // 
+            this.Print.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Print.DataPropertyName = "Print";
+            this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Print.HeaderText = "Print";
+            this.Print.Name = "Print";
+            this.Print.ReadOnly = true;
+            this.Print.Text = "Print";
+            this.Print.UseColumnTextForButtonValue = true;
+            this.Print.Width = 50;
+            // 
             // loadrpt
             // 
             this.loadrpt.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -113,39 +125,28 @@ namespace Cattering
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(389, 3);
+            this.label2.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(317, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(334, 58);
+            this.label2.Size = new System.Drawing.Size(209, 36);
             this.label2.TabIndex = 40;
             this.label2.Text = "Monthly Report";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Cattering.Properties.Resources.shayan_catt_logoo;
-            this.pictureBox1.Location = new System.Drawing.Point(729, 3);
+            this.pictureBox1.Image = global::Cattering.Properties.Resources.WhatsApp_Image_2022_03_05_at_4_32_07_PM;
+            this.pictureBox1.Location = new System.Drawing.Point(524, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 58);
+            this.pictureBox1.Size = new System.Drawing.Size(284, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
-            // 
-            // Print
-            // 
-            this.Print.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Print.DataPropertyName = "Print";
-            this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Print.HeaderText = "Print";
-            this.Print.Name = "Print";
-            this.Print.ReadOnly = true;
-            this.Print.Text = "Print";
-            this.Print.UseColumnTextForButtonValue = true;
-            this.Print.Width = 50;
             // 
             // Monthly_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(820, 902);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);

@@ -783,6 +783,9 @@ namespace Cattering
                 }
                 else if (radioButton1.Checked == false)
                 {
+                    datestat1 = dateTimePicker1.Value;
+                    datestat2 = dateTimePicker2.Value;
+                    
                     statementoptions = "datewise";
                     Customer_Datewise_Statement cstdtwise = new Customer_Datewise_Statement();
                     cstdtwise.Show();
